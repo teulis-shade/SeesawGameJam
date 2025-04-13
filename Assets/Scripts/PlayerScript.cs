@@ -28,18 +28,11 @@ public class PlayerScript : MonoBehaviour
             acceleration = -(gravity * mass - density);
         }
         velocity += acceleration / 50d;
+        double prevHeight = currHeight;
         currHeight += velocity / 50d;
         if (currHeight < 0)
         {
             CheckLeftRight();
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.otherCollider.gameObject.GetComponent<FlyingObject>() != null)
-        {
-            IncreaseMass(col.otherCollider.gameObject.GetComponent<FlyingObject>().mass);
         }
     }
 

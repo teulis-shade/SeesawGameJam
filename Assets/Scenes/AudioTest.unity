@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201f39ab94619d8419926bb1cbb49317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windSound: {fileID: 8300000, guid: 8b123345bad412a4e86c157649e5f408, type: 3}
+  windSound: {fileID: 8300000, guid: eb08c0f1bbcff6c47ac7f61eeada7534, type: 3}
 --- !u!82 &1228632760
 AudioSource:
   m_ObjectHideFlags: 0

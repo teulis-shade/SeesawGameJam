@@ -36,6 +36,7 @@ public class PlayerScript : MonoBehaviour
         velocity += acceleration / 50d;
         double prevHeight = currHeight;
         currHeight += velocity / 50d;
+        transform.position = new Vector3(transform.position.x, (float)currHeight);
         if (currHeight < 0)
         {
             CheckLeftRight();

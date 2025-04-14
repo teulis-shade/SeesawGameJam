@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    List<FlyingObject> flyingObjects;
+    
     public void GameOver()
     {
         DisplayEndScreen();
@@ -16,5 +18,32 @@ public class GameController : MonoBehaviour
         //Display Cause of Death
         //Display Buttons
         // *End Score possibly*
+    }
+
+    public FlyingObject[] CheckCollision(double prevHeight, double nextHeight, double position)
+    {
+        bool inRange = false;
+        List <FlyingObject> hitObjects = new();
+        for (int i = 0; i < flyingObjects.Count; i++)
+        {
+            if (flyingObjects[i].height < prevHeight)
+            {
+                inRange = true;
+                continue;
+            }
+            else if (inRange && flyingObjects[i].height > prevHeight)
+            {
+                inRange = false;
+                break;
+            }
+            else
+            {
+                if (flyingObjects[i].CheckCollision(position))
+                {
+                    hitObjects.Add(flyingObjects[i]);
+                }
+            }
+        }
+        return hitObjects.ToArray();
     }
 }

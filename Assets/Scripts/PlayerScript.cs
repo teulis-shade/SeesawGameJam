@@ -34,9 +34,29 @@ public class PlayerScript : MonoBehaviour
         {
             CheckLeftRight();
         }
+        else
+        {
+            FlyingObject[] hitObjects;
+            if (prevHeight < currHeight)
+            {
+                hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x);
+                foreach (FlyingObject obj in hitObjects)
+                {
+                    obj.Hit(FlyingObject.HitDirection.UP, this);
+                }
+            }
+            else
+            {
+                hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x);
+                foreach (FlyingObject obj in hitObjects)
+                {
+                    obj.Hit(FlyingObject.HitDirection.DOWN, this);
+                }
+            }
+        }
     }
 
-    private void IncreaseMass(double otherMass)
+    public void IncreaseMass(double otherMass)
     {
         mass += otherMass;
     }

@@ -206,8 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
-  currHeight: 0
-  mass: 0
+  currHeight: 2000
+  mass: 10
   active: 1
   otherPlayer: {fileID: 0}
   seesaw: {fileID: 0}

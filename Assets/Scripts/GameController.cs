@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    List<FlyingObject> flyingObjects;
-    
+    public List<FlyingObject> flyingObjects;
+
     public void GameOver()
     {
         DisplayEndScreen();

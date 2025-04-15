@@ -17,21 +17,28 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         gc = FindObjectOfType<GameController>();
+        velocity = 0f;
     }
 
     private void FixedUpdate()
     {
-        double gravity = 9.81 * math.pow((6371000 / 6371000 + currHeight), 2);
-        double density = .0000233341 * (101325 * math.pow(1 - .0000225577 * currHeight, 5.25588));
+        if (!active)
+        {
+            return;
+        }
+        double gravity = 9.81 * math.pow((6371000 / (6371000 + currHeight)), 2);
+        double density = .0000233341d * 101325d * math.pow(1d - .0000225577, 5.25588d);
         double airRes = .7296 * density * math.pow(velocity, 2);
         double acceleration;
-        if (velocity > 0)
+        if (velocity >= 0)
         {
             acceleration = -(gravity * mass + airRes);
+            acceleration /= mass;
         }
         else
         {
-            acceleration = -(gravity * mass - density);
+            acceleration = -(gravity * mass - airRes);
+            acceleration /= mass;
         }
         velocity += acceleration / 50d;
         double prevHeight = currHeight;

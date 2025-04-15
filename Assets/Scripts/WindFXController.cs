@@ -7,6 +7,8 @@ public class WindFXController : MonoBehaviour
 {
     [Range(0f, 2f)]
     public float windStrength = 0f;
+    [Range(0f, 1f)]
+    public float globalVolume = 1f;
     public List<AudioSource> windSources = new List<AudioSource>();
 
     void Update()
@@ -17,11 +19,11 @@ public class WindFXController : MonoBehaviour
         for (int i = 0; i < windSources.Count; i++)
         {
             if (i == lowerIndex)
-                windSources[i].volume = 1f - t;
+                windSources[i].volume = (1f - t) * globalVolume;
             else if (i == upperIndex)
-                windSources[i].volume = t;
+                windSources[i].volume = t * globalVolume;
             else
-                windSources[i].volume = 0f;
+                windSources[i].volume = 0f * globalVolume;
         }
     }
 

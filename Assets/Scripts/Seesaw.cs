@@ -11,6 +11,7 @@ public class Seesaw : MonoBehaviour
     private void Start()
     {
         left = -.25f;
+        middle = 0f;
         right = .25f;
     }
 }

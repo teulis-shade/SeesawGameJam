@@ -13,6 +13,12 @@ public class PlayerScript : MonoBehaviour
     public Seesaw seesaw;
     private GameController gc;
 
+
+    private void Start()
+    {
+        gc = FindObjectOfType<GameController>();
+    }
+
     private void FixedUpdate()
     {
         double gravity = 9.81 * math.pow((6371000 / 6371000 + currHeight), 2);
@@ -30,15 +36,41 @@ public class PlayerScript : MonoBehaviour
         velocity += acceleration / 50d;
         double prevHeight = currHeight;
         currHeight += velocity / 50d;
+        transform.position = new Vector3(transform.position.x, (float)currHeight);
         if (currHeight < 0)
         {
             CheckLeftRight();
         }
+        else
+        {
+            FlyingObject[] hitObjects;
+            if (prevHeight < currHeight)
+            {
+                hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x);
+                foreach (FlyingObject obj in hitObjects)
+                {
+                    obj.Hit(FlyingObject.HitDirection.UP, this);
+                }
+            }
+            else
+            {
+                hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x);
+                foreach (FlyingObject obj in hitObjects)
+                {
+                    obj.Hit(FlyingObject.HitDirection.DOWN, this);
+                }
+            }
+        }
     }
 
-    private void IncreaseMass(double otherMass)
+    public void IncreaseMass(double otherMass)
     {
         mass += otherMass;
+    }
+
+    public void DecreaseMass(double decrease)
+    {
+        mass -= decrease;
     }
 
     public void StartMovement(double startVelocity)
@@ -49,7 +81,11 @@ public class PlayerScript : MonoBehaviour
 
     public void HitSeesaw()
     {
-        otherPlayer.StartMovement(velocity);
+        double massDifference = mass - otherPlayer.mass;
+        double impulseVelocity = -velocity;
+        impulseVelocity -= math.pow(massDifference, 3) / 100f;
+        otherPlayer.StartMovement(impulseVelocity);
+        active = false;
     }
 
     public void CheckLeftRight()

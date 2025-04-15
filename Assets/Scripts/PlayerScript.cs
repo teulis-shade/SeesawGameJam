@@ -12,6 +12,12 @@ public class PlayerScript : MonoBehaviour
     public PlayerScript otherPlayer;
     public Seesaw seesaw;
     private GameController gc;
+    public Side side;
+
+    public enum Side
+    {
+        LEFT, RIGHT 
+    };
 
 
     private void Start()
@@ -97,7 +103,11 @@ public class PlayerScript : MonoBehaviour
 
     public void CheckLeftRight()
     {
-        if (seesaw.left <= transform.position.x && transform.position.x <= seesaw.right)
+        if (seesaw.left <= transform.position.x && transform.position.x <= seesaw.middle && side == Side.LEFT)
+        {
+            HitSeesaw();
+        }
+        else if (seesaw.middle <= transform.position.x && transform.position.x <= seesaw.right && side == Side.RIGHT)
         {
             HitSeesaw();
         }

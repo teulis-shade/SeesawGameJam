@@ -5,6 +5,7 @@ using UnityEngine;
 public class Seesaw : MonoBehaviour
 {
     public float left;
+    public float middle;
     public float right;
 
     private void Start()

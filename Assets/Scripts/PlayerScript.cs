@@ -23,6 +23,7 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         gc = FindObjectOfType<GameController>();
+        seesaw = FindObjectOfType<Seesaw>();
         if (active)
         {
             gc.activePlayer = this;
@@ -95,6 +96,8 @@ public class PlayerScript : MonoBehaviour
     public void StartMovement(double startVelocity)
     {
         active = true;
+        currHeight = 1f;
+        gc.activePlayer = this;
         velocity = startVelocity;
     }
 

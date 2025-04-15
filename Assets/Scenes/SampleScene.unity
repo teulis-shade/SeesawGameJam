@@ -123,6 +123,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13014542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13014544}
+  - component: {fileID: 13014543}
+  m_Layer: 0
+  m_Name: Seesaw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &13014543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13014542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e37d06709a0f8d4a90e6101e88cec6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: -15
+  middle: 0
+  right: 15
+--- !u!4 &13014544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13014542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &137777637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -307,10 +354,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
-  currHeight: 30000
+  currHeight: 1000
   mass: 300
   active: 1
-  otherPlayer: {fileID: 0}
+  otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
   side: 0
 --- !u!224 &403961452
@@ -329,7 +376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.06, y: -0.39}
+  m_AnchoredPosition: {x: -0.1, y: -0.39}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &495237331
@@ -484,9 +531,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 0
   currHeight: 0
-  mass: 30
+  mass: 300
   active: 0
-  otherPlayer: {fileID: 0}
+  otherPlayer: {fileID: 403961451}
   seesaw: {fileID: 0}
   side: 1
 --- !u!224 &503899003
@@ -1076,3 +1123,4 @@ SceneRoots:
   - {fileID: 915338070}
   - {fileID: 495237334}
   - {fileID: 137777637}
+  - {fileID: 13014544}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public List<FlyingObject> flyingObjects;
+    public PlayerScript activePlayer;
 
     public void GameOver()
     {

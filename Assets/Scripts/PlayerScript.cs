@@ -23,6 +23,10 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         gc = FindObjectOfType<GameController>();
+        if (active)
+        {
+            gc.activePlayer = this;
+        }
         velocity = 0f;
     }
 

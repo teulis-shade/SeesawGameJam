@@ -13,6 +13,12 @@ public class GameController : MonoBehaviour
         DisplayEndScreen();
     }
 
+    void FixedUpdate()
+    {
+        float horizontalMovement = Input.GetAxis("Horizontal");
+        activePlayer.transform.position += new Vector3(horizontalMovement, 0f) / 50f;
+    }
+
     private void DisplayEndScreen()
     {
         //Display Max Height

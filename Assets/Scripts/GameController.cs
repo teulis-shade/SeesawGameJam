@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public List<FlyingObject> flyingObjects;
     public PlayerScript activePlayer;
+    public CameraController camera;
 
     public void GameOver()
     {
@@ -46,5 +47,10 @@ public class GameController : MonoBehaviour
             }
         }
         return hitObjects.ToArray();
+    }
+
+    public void UpdateCamera(double height)
+    {
+        camera.UpdateCamera(height);
     }
 }

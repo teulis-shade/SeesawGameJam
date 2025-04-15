@@ -78,6 +78,8 @@ public class PlayerScript : MonoBehaviour
                 }
             }
         }
+
+        gc.UpdateCamera(currHeight);
     }
 
     public void IncreaseMass(double otherMass)

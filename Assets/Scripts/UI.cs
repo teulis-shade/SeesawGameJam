@@ -17,7 +17,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _textMeshPro.text = (gc.activePlayer.currHeight).ToString();
+        _textMeshPro.text = ((int) gc.activePlayer.currHeight).ToString();
         //_textMeshPro.text = "asdf";
     }
 }

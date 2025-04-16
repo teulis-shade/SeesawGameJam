@@ -105,7 +105,7 @@ public class PlayerScript : MonoBehaviour
     {
         double massDifference = mass - otherPlayer.mass;
         double impulseVelocity = -velocity;
-        impulseVelocity += massDifference * 20;
+        impulseVelocity += massDifference;
         otherPlayer.StartMovement(impulseVelocity);
         active = false;
     }

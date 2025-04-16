@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     void FixedUpdate()
     {
         float horizontalMovement = Input.GetAxis("Horizontal");
-        activePlayer.transform.position += new Vector3(horizontalMovement, 0f) / 50f;
+        activePlayer.transform.position += new Vector3(horizontalMovement, 0f) / 5f;
     }
 
     private void DisplayEndScreen()

@@ -26,17 +26,29 @@ public class Arrow : MonoBehaviour
     {
         //move the arrow towards seesaw
 
+        float side = 15;
+        //if (gc.activePlayer.side == 0) //LEFT
+        if (gc.activePlayer.side == PlayerScript.Side.LEFT) //LEFT
+        {
+            side = -side;
+        }
+
         //seesaw
         RectTransform rt = img.rectTransform;
 
-        Vector2 arrow = seesaw.transform.position - gc.activePlayer.transform.position;
-        //arrow = arrow.normalized*50;
-        //arrow = arrow.normalized;
-        arrow = new Vector2(arrow.x, 0);
-        //arrow = arrow.normalized;
-        //arrow = new Vector2 (arrow.x*50f, -200);
-        arrow = new Vector2 (arrow.x, -200);
-        rt.anchoredPosition = arrow;
+        //Vector2 arrow = seesaw.transform.position.x + side - gc.activePlayer.transform.position.x;
+        float arrow = side - gc.activePlayer.transform.position.x;
+        rt.anchoredPosition = new Vector2(arrow, -200);
+
+
+
+
+        //OG
+        //Vector2 arrow = seesaw.transform.position.x + side - gc.activePlayer.transform.position.x;
+        //arrow = new Vector2(arrow.x, 0);
+        //arrow = new Vector2(arrow.x, -200);
+        //rt.anchoredPosition = arrow;
+
 
         /*
         rt.anchoredPosition = new Vector2(100, 200);

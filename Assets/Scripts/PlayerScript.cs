@@ -95,6 +95,10 @@ public class PlayerScript : MonoBehaviour
 
     public void StartMovement(double startVelocity)
     {
+        if (startVelocity < 0)
+        {
+            gc.GameOver();
+        }
         active = true;
         currHeight = 1f;
         gc.activePlayer = this;

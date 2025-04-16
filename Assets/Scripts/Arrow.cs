@@ -31,8 +31,11 @@ public class Arrow : MonoBehaviour
 
         Vector2 arrow = seesaw.transform.position - gc.activePlayer.transform.position;
         //arrow = arrow.normalized*50;
-        arrow = arrow.normalized;
-        arrow = new Vector2 (arrow.x*50f, -200);
+        //arrow = arrow.normalized;
+        arrow = new Vector2(arrow.x, 0);
+        //arrow = arrow.normalized;
+        //arrow = new Vector2 (arrow.x*50f, -200);
+        arrow = new Vector2 (arrow.x, -200);
         rt.anchoredPosition = arrow;
 
         /*

@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour
         if (active)
         {
             gc.activePlayer = this;
+            gc.StartGame();
         }
         velocity = 0f;
     }
@@ -102,13 +103,15 @@ public class PlayerScript : MonoBehaviour
         currHeight = 1f;
         gc.activePlayer = this;
         velocity = startVelocity;
+        Debug.Log(velocity);
     }
 
     public void HitSeesaw()
     {
         double massDifference = mass - otherPlayer.mass;
-        double impulseVelocity = -velocity;
-        impulseVelocity += math.pow(massDifference, 1d / 3d);
+        double impulseVelocity = -velocity * .8;
+        int massSign = massDifference < 0 ? -1 : 1;
+        impulseVelocity += math.pow(math.abs(massDifference), 1d / 3d) * massSign;
         otherPlayer.StartMovement(impulseVelocity);
         active = false;
     }

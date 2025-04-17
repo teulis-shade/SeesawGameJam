@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         InitializeObjects();
-        activePlayer.StartMovement(10000d);
+        activePlayer.StartMovement(100d);
     }
 
     public void GameOver()

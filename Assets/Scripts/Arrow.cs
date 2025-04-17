@@ -29,11 +29,13 @@ public class Arrow : MonoBehaviour
         //if (gc.activePlayer.side == 0) //LEFT
         if (gc.activePlayer.side == PlayerScript.Side.LEFT) //LEFT
         {
-            side = seesaw.left;
+            side = seesaw.left + seesaw.middle;
+            side /= 2;
         }
         else
         {
-            side = seesaw.right;
+            side = seesaw.right + seesaw.middle;
+            side /= 2;
         }
 
 
@@ -41,8 +43,8 @@ public class Arrow : MonoBehaviour
         RectTransform rt = img.rectTransform;
 
         //Vector2 arrow = seesaw.transform.position.x + side - gc.activePlayer.transform.position.x;
-        float arrow = gc.activePlayer.transform.position.x - side;
-        arrow = arrow / 50f;
+        float arrow = gc.activePlayer.transform.position.x - side - 25f;
+        arrow = -arrow / 50f;
         if (arrow > 1f)
         {
             arrow = 1f;

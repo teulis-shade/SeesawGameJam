@@ -29,7 +29,6 @@ public class PlayerScript : MonoBehaviour
             gc.activePlayer = this;
             gc.StartGame();
         }
-        velocity = 0f;
     }
 
     private void FixedUpdate()

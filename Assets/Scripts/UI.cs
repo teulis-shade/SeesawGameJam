@@ -7,7 +7,7 @@ public class UI : MonoBehaviour
 {
 
     private GameController gc;
-    [SerializeField] TextMeshProUGUI _textMeshPro;
+    [SerializeField] HeightDisplay heightDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,6 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _textMeshPro.text = ((int) gc.activePlayer.currHeight).ToString();
-        //_textMeshPro.text = "asdf";
+        heightDisplay.SetHeight((int) gc.activePlayer.currHeight);
     }
 }

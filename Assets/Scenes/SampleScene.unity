@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 13014544}
   - component: {fileID: 13014543}
-  - component: {fileID: 13014546}
   - component: {fileID: 13014545}
   m_Layer: 0
   m_Name: Seesaw
@@ -157,25 +156,21 @@ MonoBehaviour:
   left: -15
   middle: 0
   right: 15
---- !u!224 &13014544
-RectTransform:
+--- !u!4 &13014544
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13014542}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.25, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &13014545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -228,14 +223,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!222 &13014546
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13014542}
-  m_CullTransparentMesh: 1
 --- !u!1001 &137777637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,6 +319,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4364100243168623329, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364100243168623329, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -420,31 +415,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
-  currHeight: 2000
-  mass: 3000
+  currHeight: 1
+  mass: 100
   active: 1
   otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
   side: 0
---- !u!224 &403961452
-RectTransform:
+--- !u!4 &403961452
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403961449}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -15, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.09, y: -0.39}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &495237331
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,25 +593,21 @@ MonoBehaviour:
   otherPlayer: {fileID: 403961451}
   seesaw: {fileID: 0}
   side: 1
---- !u!224 &503899003
-RectTransform:
+--- !u!4 &503899003
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503899000}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15, y: -0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.9, y: -0.98}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +779,7 @@ MonoBehaviour:
   flyingObjects: []
   activePlayer: {fileID: 0}
   camera: {fileID: 519420033}
+  flyingObjectInit: []
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,8 +973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1900}
-  m_SizeDelta: {x: 1760, y: 4300}
+  m_AnchoredPosition: {x: 0, y: 850}
+  m_SizeDelta: {x: 880, y: 2150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754157939
 MonoBehaviour:
@@ -1183,9 +1171,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1304133177}
   - {fileID: 403961452}
   - {fileID: 503899003}
+  - {fileID: 1304133177}
   - {fileID: 915338070}
   - {fileID: 495237334}
   - {fileID: 137777637}

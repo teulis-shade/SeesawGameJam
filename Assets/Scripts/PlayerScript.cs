@@ -79,7 +79,6 @@ public class PlayerScript : MonoBehaviour
                 }
             }
         }
-
         gc.UpdateCamera(currHeight);
     }
 
@@ -109,7 +108,7 @@ public class PlayerScript : MonoBehaviour
     {
         double massDifference = mass - otherPlayer.mass;
         double impulseVelocity = -velocity;
-        impulseVelocity += massDifference;
+        impulseVelocity += math.pow(massDifference, 1d / 3d);
         otherPlayer.StartMovement(impulseVelocity);
         active = false;
     }

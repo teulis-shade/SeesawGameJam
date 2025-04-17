@@ -25,6 +25,6 @@ public class CameraController : MonoBehaviour
         //Camera.main.ScreenToWorldPoint(mousePosition);
         RectTransform rt = img.rectTransform;
         //rt.anchoredPosition += new Vector2(0, 10);
-        rt.localPosition = new Vector2(0f, (float) (height / 30000f)*-3800f+1900f);
+        rt.localPosition = new Vector2(0f, (float) (height / 3000f)*-1700f+850f);
     }
 }

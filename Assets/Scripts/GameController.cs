@@ -7,6 +7,27 @@ public class GameController : MonoBehaviour
     public List<FlyingObject> flyingObjects;
     public PlayerScript activePlayer;
     public CameraController camera;
+    public List<FlyingObjectContainer> flyingObjectInit;
+
+    [System.Serializable]
+    public class Range
+    {
+        public float minimum;
+        public float maximum;
+    }
+    [System.Serializable]
+    public class FlyingObjectContainer
+    {
+        public GameObject obj;
+        public Range heightRange;
+        public int amount;
+    }
+
+    public void StartGame()
+    {
+        InitializeObjects();
+        activePlayer.StartMovement(100d);
+    }
 
     public void GameOver()
     {
@@ -53,6 +74,15 @@ public class GameController : MonoBehaviour
             }
         }
         return hitObjects.ToArray();
+    }
+
+    public void InitializeObjects()
+    {
+        flyingObjects = new List<FlyingObject>();
+        foreach (FlyingObjectContainer obj in flyingObjectInit)
+        {
+
+        }
     }
 
     public void UpdateCamera(double height)

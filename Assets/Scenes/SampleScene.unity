@@ -332,6 +332,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4364100243168623329, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364100243168623329, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -420,8 +428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
-  currHeight: 2000
-  mass: 3000
+  currHeight: 1
+  mass: 100
   active: 1
   otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
@@ -792,6 +800,7 @@ MonoBehaviour:
   flyingObjects: []
   activePlayer: {fileID: 0}
   camera: {fileID: 519420033}
+  flyingObjectInit: []
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,8 +994,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1900}
-  m_SizeDelta: {x: 1760, y: 4300}
+  m_AnchoredPosition: {x: 0, y: 850}
+  m_SizeDelta: {x: 880, y: 2150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754157939
 MonoBehaviour:

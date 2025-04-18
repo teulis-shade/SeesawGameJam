@@ -56,6 +56,10 @@ public class Arrow : MonoBehaviour
         arrow = arrow * 750 - 375;
         rt.anchoredPosition = new Vector2(arrow, -200);
 
+        //TODO (maybe:
+            //rotate seesaw
+
+
 
 
         //OG

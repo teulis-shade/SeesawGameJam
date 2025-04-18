@@ -14,6 +14,9 @@ public class PlayerScript : MonoBehaviour
     private GameController gc;
     public Side side;
 
+    public float left;
+    public float right;
+
     public enum Side
     {
         LEFT, RIGHT 
@@ -64,18 +67,18 @@ public class PlayerScript : MonoBehaviour
             FlyingObject[] hitObjects;
             if (prevHeight < currHeight)
             {
-                hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x);
-                foreach (FlyingObject obj in hitObjects)
+                hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x - left, transform.position.x + right);
+                for (int i = 0; i < hitObjects.Length; ++i)
                 {
-                    obj.Hit(FlyingObject.HitDirection.UP, this);
+                    hitObjects[i].Hit(FlyingObject.HitDirection.UP, this);
                 }
             }
             else
             {
-                hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x);
-                foreach (FlyingObject obj in hitObjects)
+                hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x - left, transform.position.x + right);
+                for (int i = 0; i < hitObjects.Length; ++i)
                 {
-                    obj.Hit(FlyingObject.HitDirection.DOWN, this);
+                    hitObjects[i].Hit(FlyingObject.HitDirection.DOWN, this);
                 }
             }
         }

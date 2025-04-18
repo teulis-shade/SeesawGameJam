@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
         // *End Score possibly*
     }
 
-    public FlyingObject[] CheckCollision(double prevHeight, double nextHeight, double position)
+    public FlyingObject[] CheckCollision(double prevHeight, double nextHeight, double positionLeft, double positionRight)
     {
         bool inRange = false;
         List <FlyingObject> hitObjects = new();
@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                if (flyingObjects[i].CheckCollision(position))
+                if (flyingObjects[i].CheckCollision(positionLeft, positionRight))
                 {
                     hitObjects.Add(flyingObjects[i]);
                 }

@@ -421,6 +421,8 @@ MonoBehaviour:
   otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
   side: 0
+  left: -1
+  right: 1
 --- !u!4 &403961452
 Transform:
   m_ObjectHideFlags: 0
@@ -593,6 +595,8 @@ MonoBehaviour:
   otherPlayer: {fileID: 403961451}
   seesaw: {fileID: 0}
   side: 1
+  left: -2
+  right: 2
 --- !u!4 &503899003
 Transform:
   m_ObjectHideFlags: 0
@@ -776,6 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e40024a05c6bb418d432d269074942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyingObjects: []
   activePlayer: {fileID: 0}
   cam: {fileID: 519420033}
   flyingObjectInit:

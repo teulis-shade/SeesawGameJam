@@ -44,7 +44,7 @@ public class Arrow : MonoBehaviour
         RectTransform rt = img.rectTransform;
 
         //Vector2 arrow = seesaw.transform.position.x + side - gc.activePlayer.transform.position.x;
-        float arrow = gc.activePlayer.transform.position.x - side - 25f;
+        float arrow = cam.transform.position.x - side - 25f;
         arrow = -arrow / 50f;
         if (arrow > 1f)
         {
@@ -60,7 +60,7 @@ public class Arrow : MonoBehaviour
         //Rotates Arrow
             //ToDO: make it rotate towards players seat
         //Vector2 arrow_angle = seesaw.transform.position - gc.activePlayer.transform.position - new Vector3(side -25f, 0f);
-        Vector2 arrow_angle = seesaw.transform.position - gc.activePlayer.transform.position;
+        Vector2 arrow_angle = seesaw.transform.position - cam.transform.position;
         Vector2 m_MyFirstVector = Vector2.down;
         float m_Angle = Vector2.Angle(m_MyFirstVector, arrow_angle);
         float sign = Mathf.Sign(Vector3.Cross(m_MyFirstVector, arrow_angle).z);

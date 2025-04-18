@@ -20,11 +20,11 @@ public class CameraController : MonoBehaviour
 
     public void UpdateCamera(double height)
     {
-        transform.position = gc.activePlayer.transform.position - new Vector3(0f, 0f, 10f);
+        transform.position = new Vector3(Mathf.Clamp(gc.activePlayer.transform.position.x, -10f, 10f), gc.activePlayer.transform.position.y, -10f);
         //follow player 1
         //Camera.main.ScreenToWorldPoint(mousePosition);
         RectTransform rt = img.rectTransform;
         //rt.anchoredPosition += new Vector2(0, 10);
-        rt.localPosition = new Vector2(0f, (float) (height / 3000f)*-1700f+850f);
+        rt.localPosition = new Vector2((float) (-transform.position.x * 47), (float) (height / 3000f)*-1700f+850f);
     }
 }

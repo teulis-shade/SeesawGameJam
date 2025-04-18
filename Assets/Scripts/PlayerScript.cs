@@ -102,7 +102,6 @@ public class PlayerScript : MonoBehaviour
         currHeight = 1f;
         gc.activePlayer = this;
         velocity = startVelocity;
-        Debug.Log(velocity);
     }
 
     public void HitSeesaw()

@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     public List<FlyingObject> flyingObjects;
     public PlayerScript activePlayer;
-    public CameraController camera;
+    public CameraController cam;
     public List<FlyingObjectContainer> flyingObjectInit;
 
     [System.Serializable]
@@ -81,12 +81,24 @@ public class GameController : MonoBehaviour
         flyingObjects = new List<FlyingObject>();
         foreach (FlyingObjectContainer obj in flyingObjectInit)
         {
-
+            for (int i = 0; i < obj.amount; i++)
+            {
+                FlyingObject flyer = Instantiate(obj.obj).GetComponent<FlyingObject>();
+                flyer.height = Random.Range(obj.heightRange.minimum, obj.heightRange.maximum);
+                flyingObjects.Add(flyer);
+                flyer.Initialize();
+            }
         }
+        flyingObjects.Sort((obj1, obj2) => obj1.height.CompareTo(obj2.height));
+    }
+
+    public void RemoveFlyer(FlyingObject obj)
+    {
+        flyingObjects.Remove(obj);
     }
 
     public void UpdateCamera(double height)
     {
-        camera.UpdateCamera(height);
+        cam.UpdateCamera(height);
     }
 }

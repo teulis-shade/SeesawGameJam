@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public List<FlyingObject> flyingObjects;
+    private List<FlyingObject> flyingObjects;
     public PlayerScript activePlayer;
     public CameraController cam;
     public List<FlyingObjectContainer> flyingObjectInit;

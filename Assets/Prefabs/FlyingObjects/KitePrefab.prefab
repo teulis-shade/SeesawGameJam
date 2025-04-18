@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8239356787605029981}
   - component: {fileID: 6205067298452268039}
   m_Layer: 0
-  m_Name: FlyerPrefab
+  m_Name: KitePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

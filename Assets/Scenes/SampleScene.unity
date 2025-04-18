@@ -789,6 +789,11 @@ MonoBehaviour:
       minimum: 15
       maximum: 200
     amount: 15
+  - obj: {fileID: 1240150422307126208, guid: ae7bb4629fa701249bc5943989d23108, type: 3}
+    heightRange:
+      minimum: 50
+      maximum: 400
+    amount: 4
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0

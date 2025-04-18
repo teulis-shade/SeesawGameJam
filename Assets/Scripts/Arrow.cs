@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,8 +57,16 @@ public class Arrow : MonoBehaviour
         arrow = arrow * 750 - 375;
         rt.anchoredPosition = new Vector2(arrow, -200);
 
-        //TODO (maybe:
-            //rotate seesaw
+        //Rotates Arrow
+            //ToDO: make it rotate towards players seat
+        //Vector2 arrow_angle = seesaw.transform.position - gc.activePlayer.transform.position - new Vector3(side -25f, 0f);
+        Vector2 arrow_angle = seesaw.transform.position - gc.activePlayer.transform.position;
+        Vector2 m_MyFirstVector = Vector2.down;
+        float m_Angle = Vector2.Angle(m_MyFirstVector, arrow_angle);
+        float sign = Mathf.Sign(Vector3.Cross(m_MyFirstVector, arrow_angle).z);
+        m_Angle *= sign;
+        rt.rotation = Quaternion.Euler(0, 0, m_Angle);
+
 
 
 

@@ -55,22 +55,22 @@ public class GameController : MonoBehaviour
         List <FlyingObject> hitObjects = new();
         for (int i = 0; i < flyingObjects.Count; i++)
         {
-            if (flyingObjects[i].height < prevHeight)
+            if (!inRange && flyingObjects[i].height < prevHeight)
             {
                 inRange = true;
-                continue;
             }
             else if (inRange && flyingObjects[i].height > prevHeight)
             {
                 inRange = false;
                 break;
             }
-            else
+            if (!inRange)
             {
-                if (flyingObjects[i].CheckCollision(positionLeft, positionRight))
-                {
-                    hitObjects.Add(flyingObjects[i]);
-                }
+                continue;
+            }
+            if (flyingObjects[i].CheckCollision(positionLeft, positionRight))
+            {
+                hitObjects.Add(flyingObjects[i]);
             }
         }
         return hitObjects.ToArray();

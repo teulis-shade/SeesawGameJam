@@ -19,7 +19,7 @@ public class FlyingObject : MonoBehaviour
 
     public bool CheckCollision(double xPosLeft, double xPosRight)
     {
-        return left + transform.position.x <= xPosRight && xPosLeft <= right + transform.position.x;
+        return (left + transform.position.x <= xPosRight && xPosLeft <= right + transform.position.x);
     }
 
     public virtual void Hit(HitDirection dir, PlayerScript player)

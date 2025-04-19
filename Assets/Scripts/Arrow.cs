@@ -60,7 +60,8 @@ public class Arrow : MonoBehaviour
         //Rotates Arrow
             //ToDO: make it rotate towards players seat
         //Vector2 arrow_angle = seesaw.transform.position - gc.activePlayer.transform.position - new Vector3(side -25f, 0f);
-        Vector2 arrow_angle = seesaw.transform.position - cam.transform.position;
+        //Vector2 arrow_angle = seesaw.transform.position - cam.transform.position;
+        Vector2 arrow_angle = seesaw.transform.position + new Vector3(side, 0f, 0f) - cam.transform.position;
         Vector2 m_MyFirstVector = Vector2.down;
         float m_Angle = Vector2.Angle(m_MyFirstVector, arrow_angle);
         float sign = Mathf.Sign(Vector3.Cross(m_MyFirstVector, arrow_angle).z);

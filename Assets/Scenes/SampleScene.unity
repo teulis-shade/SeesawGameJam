@@ -582,16 +582,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3792cf5c4650866469441f9f13d5d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 0
-  currHeight: 1
   mass: 100
+  gravity: 9.81
+  referenceArea: 0.14
+  dragCoefficient: 0.7
+  useCustomDensity: 0
+  customAirDensity: 1.21
+  planetRadius: 6371
+  groundLevel: 3
+  density: 0
+  velocity: 0
+  acceleration: 0
+  currHeight: 1
+  terminalVelocity: 0
   active: 1
   otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
-  side: 0
   backpack: {fileID: 231633422}
-  left: -1
-  right: 1
+  side: 0
+  leftBoundary: 0
+  rightBoundary: 0
 --- !u!4 &403961452
 Transform:
   m_ObjectHideFlags: 0
@@ -758,16 +768,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3792cf5c4650866469441f9f13d5d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 100
+  gravity: 9.81
+  referenceArea: 0.14
+  dragCoefficient: 0.7
+  useCustomDensity: 0
+  customAirDensity: 1.21
+  planetRadius: 6371
+  groundLevel: 3
+  density: 0
   velocity: 0
+  acceleration: 0
   currHeight: 0
-  mass: 10
+  terminalVelocity: 0
   active: 0
   otherPlayer: {fileID: 403961451}
   seesaw: {fileID: 0}
-  side: 1
   backpack: {fileID: 370631430}
-  left: -2
-  right: 2
+  side: 1
+  leftBoundary: 0
+  rightBoundary: 0
 --- !u!4 &503899003
 Transform:
   m_ObjectHideFlags: 0

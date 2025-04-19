@@ -56,6 +56,8 @@ public class GameController : MonoBehaviour
         List <FlyingObject> hitObjects = new();
         for (int i = 0; i < flyingObjects.Count; i++)
         {
+            //Carlos Code
+            
             if (!inRange && flyingObjects[i].height > prevHeight)
             {
                 inRange = true;
@@ -65,6 +67,18 @@ public class GameController : MonoBehaviour
                 inRange = false;
                 break;
             }
+
+            //Vitto Code
+            /*
+            if ((prevHeight < flyingObjects[i].height) && (flyingObjects[i].height < nextHeight))
+            {
+                inRange = true;
+            }else {
+                inRange = false;
+                break;
+            }*/
+
+
             if (inRange && flyingObjects[i].CheckCollision(positionLeft, positionRight))
             {
                 hitObjects.Add(flyingObjects[i]);

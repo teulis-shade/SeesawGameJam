@@ -64,8 +64,8 @@ public class NearestArrowsManager : MonoBehaviour
         int min = 0;
         int max = yesFlyList.Count - 1;
         int ret_mid = -1;
-        //while (min <= max)
-        while (min < max)
+        while (min <= max)
+        //while (min < max)
         {
             int mid = (min + max) / 2;
             if (find == yesFlyList[mid].height)
@@ -84,9 +84,11 @@ public class NearestArrowsManager : MonoBehaviour
                 min = mid + 1;
             }
         }
-        if (min == max)
+        //if (min == max)
+        if (min > max)
         {
-            ret_mid = min;
+            ret_mid = max;
+            //ret_mid = min;
         }
 
 
@@ -97,10 +99,12 @@ public class NearestArrowsManager : MonoBehaviour
 
 
         //Debug.Log(ret_mid);
+        /*
         Debug.Log("john");
         Debug.Log(min);
         Debug.Log(max);
         Debug.Log("snow");
+        */
         if (ret_mid != -1)
         {
             Debug.Log("passed part 1");
@@ -110,7 +114,10 @@ public class NearestArrowsManager : MonoBehaviour
             int i = ret_mid;
             int j = ret_mid;
             //while ((i > -1 && j < height) || (closestArrows.Count == arrowNum))
-            while ((i > -1 && j < height) || (newClosestFlyingObjects.Count == arrowNum))
+            //while ((i > -1 && j < height) || (newClosestFlyingObjects.Count == arrowNum))
+            //while (((i > -1) && (j < height)) || (newClosestFlyingObjects.Count == arrowNum))
+            //while (((i > -1) || (j < height)) || (newClosestFlyingObjects.Count < arrowNum))
+            while (((i > -1) || (j < height)) && (newClosestFlyingObjects.Count < arrowNum))
             {
                 if (i == j)
                 {
@@ -121,18 +128,30 @@ public class NearestArrowsManager : MonoBehaviour
                 else
                 {
                     //CHOOSE BETWEEN I AND J
-                    float arrowAbove;
-                    if (i > -1){
-                        arrowAbove = yesFlyList[j].transform.position.y - find;
-                    }else{
-                        arrowAbove = float.NaN;
-                    }
+                    
                     float arrowBelow;
+                    if (i > -1){
+                        arrowBelow = MathF.Abs(yesFlyList[i].transform.position.y - find);
+                    }else{
+                        //arrowBelow = float.NaN;
+
+                        //REACH BELOW LIMIT
+                        //get above forehead
+                        newClosestFlyingObjects.Add(yesFlyList[j]);
+                        j += 1;
+                        continue;
+                    }
+                    float arrowAbove;
                     if (j < height)
                     {
-                        arrowBelow = yesFlyList[i].transform.position.y - find;
+                        arrowAbove = MathF.Abs(yesFlyList[j].transform.position.y - find);
                     }else{
-                        arrowBelow = float.NaN;
+                        //arrowAbove = float.NaN;
+
+                        //REACH ABOVE LIMIT
+                        newClosestFlyingObjects.Add(yesFlyList[i]);
+                        i -= 1;
+                        continue;
                     }
 
 
@@ -154,6 +173,12 @@ public class NearestArrowsManager : MonoBehaviour
                     //    yesFlyList[j]//choice 2
                 }
             }
+            Debug.Log("pagan");
+            Debug.Log(newClosestFlyingObjects.Count);
+            Debug.Log(i);
+            Debug.Log(j);
+            Debug.Log(height);
+            Debug.Log("weon");
 
             //TODO:
             //also can deal with there being less than 5 flying objects left

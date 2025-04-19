@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour
     public Seesaw seesaw;
     private GameController gc;
     public Side side;
+    public GameObject backpack;
 
     public float left;
     public float right;
@@ -88,15 +89,23 @@ public class PlayerScript : MonoBehaviour
     public void IncreaseMass(double otherMass)
     {
         mass += otherMass;
+        UpdateBagMass();
     }
 
     public void DecreaseMass(double decrease)
     {
         mass -= decrease;
+        UpdateBagMass();
+    }
+
+    public void UpdateBagMass()
+    {
+        backpack.transform.localScale = new Vector3((float)math.sqrt(mass) / 10f, (float)math.sqrt(mass) / 10f);
     }
 
     public void StartMovement(double startVelocity)
     {
+        UpdateBagMass();
         if (startVelocity < 0)
         {
             gc.GameOver();

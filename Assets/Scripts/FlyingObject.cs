@@ -37,6 +37,6 @@ public class FlyingObject : MonoBehaviour
     protected virtual float GetInitialX()
     {
         //This will depend on the object, for now, returns a random number between -30 and 30
-        return Random.Range(-30f, 30f);
+        return Random.Range(-18f, 18f);
     }
 }

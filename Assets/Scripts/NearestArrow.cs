@@ -62,6 +62,9 @@ public class NearestArrow : MonoBehaviour
             m_Angle *= sign;
             rt.rotation = Quaternion.Euler(0, 0, m_Angle);
 
+
+            Debug.DrawLine(foVector, cameraVector, Color.red);
+
             /*
             //Vector2 arrow_angle = flyingObject.transform.position - cam.transform.position;
             //Vector2 m_MyFirstVector = Vector2.down;

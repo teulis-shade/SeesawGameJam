@@ -52,29 +52,16 @@ public class GameController : MonoBehaviour
 
     public FlyingObject[] CheckCollision(double lowerHeight, double upperHeight, double positionLeft, double positionRight)
     {
-        bool inRange = false;
         List <FlyingObject> hitObjects = new();
         for (int i = 0; i < flyingObjects.Count; i++)
         {
-            // if (!inRange && flyingObjects[i].height > prevHeight)
-            // {
-            //     inRange = true;
-            // }
-            // if (inRange && flyingObjects[i].height > nextHeight)
-            // {
-            //     inRange = false;
-            //     break;
-            // }
-            // if (inRange && flyingObjects[i].CheckCollision(positionLeft, positionRight))
-            // {
-            //     hitObjects.Add(flyingObjects[i]);
-            // }
-            double objectHeight = flyingObjects[i].height;
-            if (upperHeight > objectHeight)
+            FlyingObject flyingObject = flyingObjects[i];
+            double objectHeight = flyingObject.height;
+            if (objectHeight > upperHeight)
             {
                 break;
             }
-            if (upperHeight > objectHeight && objectHeight > lowerHeight)
+            if (upperHeight > objectHeight && objectHeight > lowerHeight && flyingObject.CheckCollision(positionLeft, positionRight))
             {
                 hitObjects.Add(flyingObjects[i]);
             }

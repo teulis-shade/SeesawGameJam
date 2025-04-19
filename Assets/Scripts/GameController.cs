@@ -34,6 +34,10 @@ public class GameController : MonoBehaviour
         DisplayEndScreen();
     }
 
+    public List<FlyingObject> GetFlyingObjects() {
+        return flyingObjects;
+    }
+
     void FixedUpdate()
     {
         float horizontalMovement = Input.GetAxis("Horizontal");

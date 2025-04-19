@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour
             {
                 inRange = true;
             }
-            else if (inRange && flyingObjects[i].height < nextHeight)
+            if (inRange && flyingObjects[i].height > nextHeight)
             {
                 inRange = false;
                 break;

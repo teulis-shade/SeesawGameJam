@@ -42,6 +42,38 @@ public class NearestArrow : MonoBehaviour
             //TODO:
             //do tracking and moving
 
+            //try 2
+            RectTransform rt = img.rectTransform;
+            Vector2 foVector = new Vector2(flyingObject.transform.position.x, flyingObject.transform.position.y);
+            //Vector2 cameraVector = new Vector2(cam.transform.position.x, cam.transform.position.y);
+            Vector2 cameraVector = new Vector2(gc.activePlayer.transform.position.x, gc.activePlayer.transform.position.y);
+
+            //Move
+            Vector2 camToFlyingObject = foVector - cameraVector;
+            camToFlyingObject = camToFlyingObject.normalized;
+            camToFlyingObject = camToFlyingObject * 50f;
+            rt.anchoredPosition = camToFlyingObject;
+
+            //Rotate
+            
+            
+            float m_Angle = Vector2.Angle(foVector, cameraVector);
+            float sign = Mathf.Sign(Vector3.Cross(foVector, cameraVector).z);
+            m_Angle *= sign;
+            rt.rotation = Quaternion.Euler(0, 0, m_Angle);
+
+            /*
+            //Vector2 arrow_angle = flyingObject.transform.position - cam.transform.position;
+            //Vector2 m_MyFirstVector = Vector2.down;
+            //float m_Angle = Vector2.Angle(new Vector2(flyingObject.transform.position.x, flyingObject.transform.position.y), new Vector2(cam.transform.position.x, cam.transform.position.y));
+            float m_Angle = Vector2.Angle(new Vector2(flyingObject.transform.position.x, flyingObject.transform.position.y), new Vector2(cam.transform.position.x, cam.transform.position.y));
+            float sign = Mathf.Sign(Vector3.Cross(m_MyFirstVector, arrow_angle).z);
+            m_Angle *= sign;
+            rt.rotation = Quaternion.Euler(0, 0, m_Angle);
+            */
+
+            //try 1
+            /*
             RectTransform rt = img.rectTransform;
             Vector2 arrow_angle = flyingObject.transform.position - cam.transform.position;
             Vector2 m_MyFirstVector = Vector2.down;
@@ -49,6 +81,7 @@ public class NearestArrow : MonoBehaviour
             float sign = Mathf.Sign(Vector3.Cross(m_MyFirstVector, arrow_angle).z);
             m_Angle *= sign;
             rt.rotation = Quaternion.Euler(0, 0, m_Angle);
+            */
         }
 
 

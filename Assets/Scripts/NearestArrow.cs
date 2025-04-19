@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class NearestArrow : MonoBehaviour
 {
@@ -42,7 +43,29 @@ public class NearestArrow : MonoBehaviour
             //TODO:
             //do tracking and moving
 
+            //TRY 3
+
+            //ROTATE ARROW
+                RectTransform rt = img.rectTransform;
+                Vector2 foVector = new Vector2(flyingObject.transform.position.x, flyingObject.transform.position.y);
+                Vector2 playerVector = new Vector2(gc.activePlayer.transform.position.x, gc.activePlayer.transform.position.y);
+
+                Vector3 direction = foVector - playerVector;
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+                rt.rotation = Quaternion.Euler(0, 0, angle+90);
+
+            //MOVE ARROW
+                Vector2 camToFlyingObject = foVector - playerVector;
+                camToFlyingObject = camToFlyingObject.normalized;
+                camToFlyingObject = camToFlyingObject * 50f;
+                rt.anchoredPosition = camToFlyingObject;
+
+            Debug.DrawLine(foVector, playerVector, Color.red);
+
+
             //try 2
+            /*
             RectTransform rt = img.rectTransform;
             Vector2 foVector = new Vector2(flyingObject.transform.position.x, flyingObject.transform.position.y);
             //Vector2 cameraVector = new Vector2(cam.transform.position.x, cam.transform.position.y);
@@ -57,13 +80,17 @@ public class NearestArrow : MonoBehaviour
             //Rotate
             
             
-            float m_Angle = Vector2.Angle(foVector, cameraVector);
-            float sign = Mathf.Sign(Vector3.Cross(foVector, cameraVector).z);
-            m_Angle *= sign;
-            rt.rotation = Quaternion.Euler(0, 0, m_Angle);
+            //float m_Angle = Vector2.Angle(foVector, cameraVector);
+            //float sign = Mathf.Sign(Vector3.Cross(foVector, cameraVector).z);
+            //m_Angle *= sign;
+            //rt.rotation = Quaternion.Euler(0, 0, m_Angle);
 
 
+            rt.transform.LookAt(flyingObject.transform, Vector3.forward);
             Debug.DrawLine(foVector, cameraVector, Color.red);
+            */
+
+
 
             /*
             //Vector2 arrow_angle = flyingObject.transform.position - cam.transform.position;

@@ -22,6 +22,8 @@ public class PlayerScript : MonoBehaviour
     public int planetRadius = 6371; // km
     [Range(-5f, 10f)]
     public float groundLevel = 2f; // m
+    [Range(0f, 10f)]
+    public float minimumImpulse = 5f; // m
 
     [Header("Player State")]
     public double density;
@@ -150,10 +152,12 @@ public class PlayerScript : MonoBehaviour
 
     public void HitSeesaw()
     {
-        double massDifference = mass - otherPlayer.mass;
-        double impulseVelocity = -velocity * .8;
-        int massSign = massDifference < 0 ? -1 : 1;
-        impulseVelocity += math.pow(math.abs(massDifference), 1d / 3d) * massSign;
+        // double massDifference = mass - otherPlayer.mass;
+        // double impulseVelocity = -velocity * .8;
+        // int massSign = massDifference < 0 ? -1 : 1;
+        // impulseVelocity += math.pow(math.abs(massDifference), 1d / 3d) * massSign;
+        double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
+        impulseVelocity += minimumImpulse; // Seesaw minimum impulse velocity
         otherPlayer.StartMovement(impulseVelocity);
         active = false;
     }

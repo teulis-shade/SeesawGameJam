@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using static GameController;
@@ -63,7 +64,8 @@ public class NearestArrowsManager : MonoBehaviour
         int min = 0;
         int max = yesFlyList.Count - 1;
         int ret_mid = -1;
-        while (min <= max)
+        //while (min <= max)
+        while (min < max)
         {
             int mid = (min + max) / 2;
             if (find == yesFlyList[mid].height)
@@ -82,6 +84,11 @@ public class NearestArrowsManager : MonoBehaviour
                 min = mid + 1;
             }
         }
+        if (min == max)
+        {
+            ret_mid = min;
+        }
+
 
         //mid has my array value
         //find nearest x
@@ -89,9 +96,15 @@ public class NearestArrowsManager : MonoBehaviour
         //get nearest things
 
 
-        
+        //Debug.Log(ret_mid);
+        Debug.Log("john");
+        Debug.Log(min);
+        Debug.Log(max);
+        Debug.Log("snow");
         if (ret_mid != -1)
         {
+            Debug.Log("passed part 1");
+
             //PART 1: RUN LOOP TO GET arrowNum NEW CLOSEST FLYING OBJECTS
             List<FlyingObject> newClosestFlyingObjects = new List<FlyingObject>();
             int i = ret_mid;

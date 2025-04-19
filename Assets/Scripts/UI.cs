@@ -8,6 +8,12 @@ public class UI : MonoBehaviour
 
     private GameController gc;
     [SerializeField] HeightDisplay heightDisplay;
+    [SerializeField] TopMassDisplay topMassDisplay;
+
+    void SetMassDisplay(PlayerScript player, bool isActive)
+    {
+        topMassDisplay.SetPlayerMass(player.mass, player.side, isActive);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -18,5 +24,7 @@ public class UI : MonoBehaviour
     void Update()
     {
         heightDisplay.SetHeight((int) gc.activePlayer.currHeight);
+        SetMassDisplay(gc.activePlayer, true);
+        SetMassDisplay(gc.activePlayer.otherPlayer, false);
     }
 }

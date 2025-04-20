@@ -156,7 +156,8 @@ public class PlayerScript : MonoBehaviour
         // double impulseVelocity = -velocity * .8;
         // int massSign = massDifference < 0 ? -1 : 1;
         // impulseVelocity += math.pow(math.abs(massDifference), 1d / 3d) * massSign;
-        double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
+        //double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
+        double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
         impulseVelocity += minimumImpulse; // Seesaw minimum impulse velocity
         otherPlayer.StartMovement(impulseVelocity);
         active = false;

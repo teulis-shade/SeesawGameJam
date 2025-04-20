@@ -8,8 +8,8 @@ public class GameController : MonoBehaviour
     public PlayerScript activePlayer;
     public CameraController cam;
     public List<FlyingObjectContainer> flyingObjectInit;
-    [Range(5f, 150f)]
-    public double playerStartingImpulse = 25f;
+    [Range(0f, 150f)]
+    public double playerStartingImpulse = 0f;
 
     [System.Serializable]
     public class Range

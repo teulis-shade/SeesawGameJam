@@ -231,6 +231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248416279606672394, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.030029297
+      objectReference: {fileID: 0}
     - target: {fileID: 1375005453303796010, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
       propertyPath: m_Name
       value: MainUI
@@ -583,13 +587,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 100
-  gravity: 9.81
+  gravity: 30
   referenceArea: 0.14
   dragCoefficient: 0.7
   useCustomDensity: 0
   customAirDensity: 1.21
   planetRadius: 6371
-  groundLevel: 3
+  groundLevel: 2
+  minimumImpulse: 0.5
   density: 0
   velocity: 0
   acceleration: 0
@@ -611,7 +616,7 @@ Transform:
   m_GameObject: {fileID: 403961449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -769,13 +774,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 100
-  gravity: 9.81
+  gravity: 30
   referenceArea: 0.14
   dragCoefficient: 0.7
   useCustomDensity: 0
   customAirDensity: 1.21
   planetRadius: 6371
-  groundLevel: 3
+  groundLevel: 2
+  minimumImpulse: 0.5
   density: 0
   velocity: 0
   acceleration: 0
@@ -797,7 +803,7 @@ Transform:
   m_GameObject: {fileID: 503899000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -0.98, z: 0}
+  m_LocalPosition: {x: 10, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -914,7 +920,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -960,6 +966,11 @@ MonoBehaviour:
   player1: {fileID: 403961451}
   player2: {fileID: 503899002}
   img: {fileID: 754157939}
+  zoomStartHeight: 47
+  zoomedOutSize: 20
+  defaultSize: 10
+  zoomLerpSpeed: 5
+  height: 0
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,6 +996,7 @@ MonoBehaviour:
       minimum: 50
       maximum: 400
     amount: 4
+  playerStartingImpulse: 10
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0

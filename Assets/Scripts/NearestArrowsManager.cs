@@ -54,6 +54,9 @@ public class NearestArrowsManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Vector3 playerPos = gc.activePlayer.transform.position;
+        //transform.position = new Vector3(playerPos.x, playerPos.y, transform.position.z);
+
         float find = gc.activePlayer.gameObject.transform.position.y;
         //set flyingObject of arrows
         List<FlyingObject> yesFlyList = gc.GetFlyingObjects();

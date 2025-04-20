@@ -14,6 +14,7 @@ public class NearestArrow : MonoBehaviour
     //[SerializeField] GameObject go;
     // Start is called before the first frame update
     //private Seesaw seesaw;
+    public float arrow_displacement = 200f;
 
     public FlyingObject GetFlyingObject() { return flyingObject; }
     public void SetFlyingObject(FlyingObject fo) { flyingObject = fo; }
@@ -31,6 +32,8 @@ public class NearestArrow : MonoBehaviour
     void FixedUpdate()
     {
         //TODO:
+
+        
 
         //if has no object, should dissapear from screen or turn invisible
         if (flyingObject == null)
@@ -58,7 +61,7 @@ public class NearestArrow : MonoBehaviour
             //MOVE ARROW
                 Vector2 camToFlyingObject = foVector - playerVector;
                 camToFlyingObject = camToFlyingObject.normalized;
-                camToFlyingObject = camToFlyingObject * 50f;
+                camToFlyingObject = camToFlyingObject * arrow_displacement;//CHANGEEEEEEEEEEEEE MEEEEEEEEEEEEEE IF YOU WANT TO CHANGE HOW FAR AWAY FROM PLAYER THIS ISSSS
                 rt.anchoredPosition = camToFlyingObject;
 
             Debug.DrawLine(foVector, playerVector, Color.red);

@@ -64,6 +64,13 @@ public class NearestArrow : MonoBehaviour
                 camToFlyingObject = camToFlyingObject * arrow_displacement;//CHANGEEEEEEEEEEEEE MEEEEEEEEEEEEEE IF YOU WANT TO CHANGE HOW FAR AWAY FROM PLAYER THIS ISSSS
                 rt.anchoredPosition = camToFlyingObject;
 
+            //SCALE ARROW
+            float scaleComponent = (foVector - playerVector).magnitude;
+            // CAN CHANGE THIS EQUATION
+            scaleComponent = 150f-scaleComponent;
+
+            rt.sizeDelta = new Vector2(scaleComponent, scaleComponent);
+
             Debug.DrawLine(foVector, playerVector, Color.red);
 
 

@@ -91,6 +91,13 @@ public class NearestArrowsManager : MonoBehaviour
         if (min > max)
         {
             ret_mid = max;
+
+            //fix bug where it does not grab min if first value is gone
+            if ((ret_mid == -1) && (yesFlyList.Count > 0))
+            {
+                ret_mid = 0;
+            }
+ 
             //ret_mid = min;
         }
 

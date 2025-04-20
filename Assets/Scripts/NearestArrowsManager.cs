@@ -110,7 +110,7 @@ public class NearestArrowsManager : MonoBehaviour
         */
         if (ret_mid != -1)
         {
-            Debug.Log("passed part 1");
+            // Debug.Log("passed part 1");
 
             //PART 1: RUN LOOP TO GET arrowNum NEW CLOSEST FLYING OBJECTS
             List<FlyingObject> newClosestFlyingObjects = new List<FlyingObject>();
@@ -176,12 +176,12 @@ public class NearestArrowsManager : MonoBehaviour
                     //    yesFlyList[j]//choice 2
                 }
             }
-            Debug.Log("pagan");
-            Debug.Log(newClosestFlyingObjects.Count);
-            Debug.Log(i);
-            Debug.Log(j);
-            Debug.Log(height);
-            Debug.Log("weon");
+            //Debug.Log("pagan");
+            // Debug.Log(newClosestFlyingObjects.Count);
+            // Debug.Log(i);
+            // Debug.Log(j);
+            // Debug.Log(height);
+            // Debug.Log("weon");
 
             //TODO:
             //also can deal with there being less than 5 flying objects left

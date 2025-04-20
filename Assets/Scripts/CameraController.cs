@@ -45,9 +45,11 @@ public class CameraController : MonoBehaviour
         {
             float t = Mathf.InverseLerp(0f, zoomStartHeight, (float) height);
             targetX = Mathf.Lerp(0f, calcTransform.x, t);
+            Debug.Log($"t: {t}, min: {0f} lerp: {targetX}, max: {calcTransform.x}");
             targetSize = Mathf.Lerp(zoomedOutSize, defaultSize, t);
         }
-        calcTransform.x = Mathf.Lerp(calcTransform.x, targetX, Time.deltaTime * zoomLerpSpeed);
+       // calcTransform.x = Mathf.Lerp(calcTransform.x, targetX, Time.deltaTime * zoomLerpSpeed);
+        calcTransform.x = targetX;
         transform.position = calcTransform;
         rt.localPosition = new Vector2((float) (-transform.position.x * 47), (float) (height / 3000f) * -1700f + 800f); //can update 3000 (if needed)
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * zoomLerpSpeed);

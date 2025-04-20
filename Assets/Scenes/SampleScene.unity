@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3792cf5c4650866469441f9f13d5d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 100
+  mass: 70
   gravity: 30
   referenceArea: 0.14
   dragCoefficient: 0.7
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3792cf5c4650866469441f9f13d5d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mass: 100
+  mass: 70
   gravity: 30
   referenceArea: 0.14
   dragCoefficient: 0.7
@@ -986,6 +986,11 @@ MonoBehaviour:
   activePlayer: {fileID: 0}
   cam: {fileID: 519420033}
   flyingObjectInit:
+  - obj: {fileID: 8051862338358336381, guid: c811439e678a2b646abee5048e5436aa, type: 3}
+    heightRange:
+      minimum: 10
+      maximum: 150
+    amount: 10
   - obj: {fileID: 8051862338358336381, guid: 825150242e2592c4e8384d41cfe1a320, type: 3}
     heightRange:
       minimum: 15
@@ -995,8 +1000,8 @@ MonoBehaviour:
     heightRange:
       minimum: 50
       maximum: 400
-    amount: 4
-  playerStartingImpulse: 40
+    amount: 10
+  playerStartingImpulse: 60
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0

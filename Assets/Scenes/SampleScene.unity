@@ -996,7 +996,7 @@ MonoBehaviour:
       minimum: 50
       maximum: 400
     amount: 4
-  playerStartingImpulse: 10
+  playerStartingImpulse: 40
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -58,6 +58,14 @@ public class PlayerScript : MonoBehaviour
         gc = FindObjectOfType<GameController>();
         seesaw = FindObjectOfType<Seesaw>();
         animator = GetComponent<Animator>();
+        if (side == Side.RIGHT)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
         if (active)
         {
             gc.activePlayer = this;
@@ -105,7 +113,7 @@ public class PlayerScript : MonoBehaviour
             FlyingObject[] hitObjects;
             if (prevHeight < currHeight)
             {
-                hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x - leftBoundary, transform.position.x + rightBoundary);
+                hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x + leftBoundary, transform.position.x + rightBoundary);
                 for (int i = 0; i < hitObjects.Length; ++i)
                 {
                     if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
@@ -117,7 +125,7 @@ public class PlayerScript : MonoBehaviour
             }
             else
             {
-                hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x - leftBoundary, transform.position.x + rightBoundary);
+                hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x + leftBoundary, transform.position.x + rightBoundary);
                 for (int i = 0; i < hitObjects.Length; ++i)
                 {
                     if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))

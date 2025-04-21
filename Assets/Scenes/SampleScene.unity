@@ -564,7 +564,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ccb341065c07142439543d026493efef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ad9acdd4a7eac940859fb741be26bde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -606,8 +606,8 @@ MonoBehaviour:
   seesaw: {fileID: 0}
   backpack: {fileID: 231633422}
   side: 0
-  leftBoundary: 0
-  rightBoundary: 0
+  leftBoundary: -3
+  rightBoundary: 3
   animator: {fileID: 0}
 --- !u!4 &403961452
 Transform:
@@ -774,9 +774,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf9d3ae8625872b488c1fb72f7d596cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ad9acdd4a7eac940859fb741be26bde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 0.6}
@@ -816,8 +816,8 @@ MonoBehaviour:
   seesaw: {fileID: 0}
   backpack: {fileID: 370631430}
   side: 1
-  leftBoundary: 0
-  rightBoundary: 0
+  leftBoundary: -3
+  rightBoundary: 3
   animator: {fileID: 0}
 --- !u!4 &503899003
 Transform:

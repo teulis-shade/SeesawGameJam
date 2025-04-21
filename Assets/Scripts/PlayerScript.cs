@@ -45,6 +45,8 @@ public class PlayerScript : MonoBehaviour
     public float leftBoundary;
     public float rightBoundary;
 
+    public Animator animator;
+
     public enum Side
     {
         LEFT, RIGHT 
@@ -55,6 +57,7 @@ public class PlayerScript : MonoBehaviour
     {
         gc = FindObjectOfType<GameController>();
         seesaw = FindObjectOfType<Seesaw>();
+        animator = GetComponent<Animator>();
         if (active)
         {
             gc.activePlayer = this;
@@ -105,6 +108,10 @@ public class PlayerScript : MonoBehaviour
                 hitObjects = gc.CheckCollision(prevHeight, currHeight, transform.position.x - leftBoundary, transform.position.x + rightBoundary);
                 for (int i = 0; i < hitObjects.Length; ++i)
                 {
+                    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                    {
+                        animator.SetTrigger("CatchItem");
+                    }
                     hitObjects[i].Hit(FlyingObject.HitDirection.UP, this);
                 }
             }
@@ -113,6 +120,10 @@ public class PlayerScript : MonoBehaviour
                 hitObjects = gc.CheckCollision(currHeight, prevHeight, transform.position.x - leftBoundary, transform.position.x + rightBoundary);
                 for (int i = 0; i < hitObjects.Length; ++i)
                 {
+                    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+                    {
+                        animator.SetTrigger("CatchItem");
+                    }
                     hitObjects[i].Hit(FlyingObject.HitDirection.DOWN, this);
                 }
             }

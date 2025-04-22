@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6270402448051201990}
   - component: {fileID: 8239356787605029981}
-  - component: {fileID: 6205067298452268039}
+  - component: {fileID: 5359646958810283047}
   m_Layer: 0
   m_Name: HanggliderPrefab
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6205067298452268039
+--- !u!114 &5359646958810283047
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,10 +94,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8051862338358336381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e4f97c29c3427498c668cfc45264b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 42f86eec9cb79cc4d8d7ab0897051044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 50
   height: 6
   left: -5
   right: 5
+  minSpeed: 0.2
+  maxSpeed: 1.4
+  minAmplitude: 4
+  maxAmplitude: 10

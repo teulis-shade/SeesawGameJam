@@ -1466,12 +1466,12 @@ MonoBehaviour:
   flyingObjectInit:
   - obj: {fileID: 8051862338358336381, guid: c811439e678a2b646abee5048e5436aa, type: 3}
     heightRange:
-      minimum: 10
-      maximum: 150
-    amount: 10
+      minimum: 100
+      maximum: 300
+    amount: 5
   - obj: {fileID: 8051862338358336381, guid: 825150242e2592c4e8384d41cfe1a320, type: 3}
     heightRange:
-      minimum: 15
+      minimum: 10
       maximum: 200
     amount: 15
   - obj: {fileID: 1240150422307126208, guid: ae7bb4629fa701249bc5943989d23108, type: 3}

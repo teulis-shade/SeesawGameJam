@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class FlyingObject : MonoBehaviour
 {
-    public double mass;
     public double height;
 
+    [Header("Object Config")]
+    public double mass;
     public double left;
     public double right;
 

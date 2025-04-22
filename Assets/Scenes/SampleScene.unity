@@ -1479,6 +1479,11 @@ MonoBehaviour:
       minimum: 50
       maximum: 400
     amount: 10
+  - obj: {fileID: 1240150422307126208, guid: 9b0ceba06c344824e908a0f3a80a746a, type: 3}
+    heightRange:
+      minimum: 10
+      maximum: 100
+    amount: 10
   playerStartingImpulse: 60
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}

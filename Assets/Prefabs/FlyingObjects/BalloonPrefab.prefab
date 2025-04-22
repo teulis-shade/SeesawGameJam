@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.9130576, y: 62.42799, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,9 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 0
   mass: 105
-  left: -1.5
-  right: 1.5
+  left: 3
+  right: 3
   minSpeed: 0.1
   maxSpeed: 0.8
   minAmplitude: 1
   maxAmplitude: 3
+  flipSprite: 1

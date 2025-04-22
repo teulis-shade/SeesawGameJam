@@ -13,7 +13,7 @@ public class UI : MonoBehaviour
 
     void SetMassDisplay(PlayerScript player, bool isActive)
     {
-        topMassDisplay.SetPlayerMass(player.mass, player.side, isActive);
+        topMassDisplay?.SetPlayerMass(player.mass, player.side, isActive);
     }
     // Start is called before the first frame update
     void Start()
@@ -24,9 +24,9 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        heightDisplay.SetHeight((int) gc.activePlayer.currHeight);
+        heightDisplay?.SetHeight((int) gc.activePlayer.currHeight);
         SetMassDisplay(gc.activePlayer, true);
         SetMassDisplay(gc.activePlayer.otherPlayer, false);
-        velocityText.SetPlayerVelocity(gc.activePlayer.velocity);
+        velocityText?.SetPlayerVelocity(gc.activePlayer.velocity);
     }
 }

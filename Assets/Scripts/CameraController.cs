@@ -35,23 +35,21 @@ public class CameraController : MonoBehaviour
     {
         this.height = height;
         Vector3 calcTransform = new Vector3(Mathf.Clamp(gc.activePlayer.transform.position.x, -10f, 10f), gc.activePlayer.transform.position.y, -10f);
-        //follow player 1
-        //Camera.main.ScreenToWorldPoint(mousePosition);
-        RectTransform rt = img.rectTransform;
-        //rt.anchoredPosition += new Vector2(0, 10);
         float targetX = calcTransform.x;
         float targetSize = defaultSize;
         if (height < zoomStartHeight)
         {
             float t = Mathf.InverseLerp(0f, zoomStartHeight, (float) height);
             targetX = Mathf.Lerp(0f, calcTransform.x, t);
-            // Debug.Log($"t: {t}, min: {0f} lerp: {targetX}, max: {calcTransform.x}");
             targetSize = Mathf.Lerp(zoomedOutSize, defaultSize, t);
         }
-        //calcTransform.x = Mathf.Lerp(calcTransform.x, targetX, Time.deltaTime * 20);
         calcTransform.x = targetX;
         transform.position = calcTransform;
-        rt.localPosition = new Vector2((float) (-transform.position.x * 47), (float) (height / 3000f) * -1700f + 800f); //can update 3000 (if needed)
+        if (img != null)
+        {
+            RectTransform rt = img.rectTransform;
+            rt.localPosition = new Vector2((float) (-transform.position.x * 47), (float) (height / 3000f) * -1700f + 1788f); //can update 3000 (if needed)
+        }
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetSize, Time.deltaTime * zoomLerpSpeed);
     }
 }

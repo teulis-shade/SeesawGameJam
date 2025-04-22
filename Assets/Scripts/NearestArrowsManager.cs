@@ -60,8 +60,6 @@ public class NearestArrowsManager : MonoBehaviour
         float find = gc.activePlayer.gameObject.transform.position.y;
         //set flyingObject of arrows
         List<FlyingObject> yesFlyList = gc.GetFlyingObjects();
-
-        int low = 0;
         int height = yesFlyList.Count;
 
         int min = 0;

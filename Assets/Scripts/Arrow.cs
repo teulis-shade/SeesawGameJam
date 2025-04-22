@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class Arrow : MonoBehaviour
 {
     [SerializeField] Image img;
+    [SerializeField] double minimumDisplayHeight = 10f;
+    [SerializeField] float fadeSpeed = 2f;
     private GameController gc;
     private Camera cam;
     //[SerializeField] GameObject go;
     // Start is called before the first frame update
     private Seesaw seesaw;
+    private CanvasGroup canvasGroup;
 
 
 
@@ -20,11 +23,17 @@ public class Arrow : MonoBehaviour
         seesaw = FindObjectOfType<Seesaw>();
         gc = FindObjectOfType<GameController>();
         cam = FindObjectOfType<Camera>();
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        PlayerScript player = gc.activePlayer;
+        bool shouldShow = player.currHeight >= minimumDisplayHeight && player.velocity < 0d;
+        float targetAlpha = shouldShow ? 1f : 0f;
+        canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, targetAlpha, fadeSpeed * Time.deltaTime);
+
         //move the arrow towards seesaw
         float side;
         //if (gc.activePlayer.side == 0) //LEFT

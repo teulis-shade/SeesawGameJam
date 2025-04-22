@@ -5,11 +5,18 @@ using UnityEngine;
 
 public class WindFXController : MonoBehaviour
 {
-    [Range(0f, 2f)]
+    [Range(0f, 4f)]
     public float windStrength = 0f;
     [Range(0f, 1f)]
     public float globalVolume = 1f;
     public List<AudioSource> windSources = new List<AudioSource>();
+    public AnimationCurve velocityCurve;
+
+    public void SetVelocity(double velocity)
+    {
+        windStrength = velocityCurve.Evaluate((float) velocity);
+        //windStrength = normStrength * (windSources.Count - 1);
+    }
 
     void Update()
     {

@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     [Header("Configurable Values")]
     [Range(10f, 300f)]
     public double mass = 100f; // kg
-    [Range(0.1f, 40f)]
+    [Range(-40f, 40f)]
     public float gravity = 9.81f; // m / s^2
     [Range(0.01f, 5f)]
     public float referenceArea = 0.140f; // m^2

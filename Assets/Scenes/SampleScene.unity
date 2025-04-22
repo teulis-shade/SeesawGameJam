@@ -481,6 +481,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -200
       objectReference: {fileID: 0}
+    - target: {fileID: 6354245535358562892, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4319723664078877212, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
@@ -1466,24 +1470,119 @@ MonoBehaviour:
   flyingObjectInit:
   - obj: {fileID: 8051862338358336381, guid: c811439e678a2b646abee5048e5436aa, type: 3}
     heightRange:
-      minimum: 100
+      minimum: 120
       maximum: 300
     amount: 5
   - obj: {fileID: 8051862338358336381, guid: 825150242e2592c4e8384d41cfe1a320, type: 3}
     heightRange:
-      minimum: 10
-      maximum: 200
-    amount: 15
+      minimum: 15
+      maximum: 100
+    amount: 8
   - obj: {fileID: 1240150422307126208, guid: ae7bb4629fa701249bc5943989d23108, type: 3}
     heightRange:
-      minimum: 50
-      maximum: 400
+      minimum: 200
+      maximum: 700
     amount: 10
   - obj: {fileID: 1240150422307126208, guid: 9b0ceba06c344824e908a0f3a80a746a, type: 3}
     heightRange:
       minimum: 10
-      maximum: 100
+      maximum: 70
+    amount: 6
+  - obj: {fileID: 8051862338358336381, guid: e59f892d573853b40af7acf50090d21c, type: 3}
+    heightRange:
+      minimum: 700
+      maximum: 1700
+    amount: 8
+  - obj: {fileID: 8051862338358336381, guid: 2f370163ac8cb3a42b83f57329bc3672, type: 3}
+    heightRange:
+      minimum: 400
+      maximum: 1200
+    amount: 5
+  - obj: {fileID: 8051862338358336381, guid: a746e12b191b9bd498a5c23a8a0cb7e5, type: 3}
+    heightRange:
+      minimum: 60
+      maximum: 160
     amount: 10
+  - obj: {fileID: 1240150422307126208, guid: 16b41bb2ac9deff46bf9f18ca1143e79, type: 3}
+    heightRange:
+      minimum: 30
+      maximum: 200
+    amount: 10
+  - obj: {fileID: 1240150422307126208, guid: 6d346de27b686664483839b0007bf03d, type: 3}
+    heightRange:
+      minimum: 130
+      maximum: 500
+    amount: 15
+  - obj: {fileID: 8051862338358336381, guid: b016db07637c47a4bafbe41d67c1756c, type: 3}
+    heightRange:
+      minimum: 800
+      maximum: 1500
+    amount: 2
+  - obj: {fileID: 8051862338358336381, guid: fbfd19e4ec476194d923c64646647d71, type: 3}
+    heightRange:
+      minimum: 600
+      maximum: 900
+    amount: 3
+  - obj: {fileID: 8051862338358336381, guid: 5992e6f137cdb8b4ca253faef3b3e89a, type: 3}
+    heightRange:
+      minimum: 1300
+      maximum: 1800
+    amount: 4
+  - obj: {fileID: 8051862338358336381, guid: a687840bb3d5f2e4f9eb1c19e2f0a977, type: 3}
+    heightRange:
+      minimum: 1200
+      maximum: 1400
+    amount: 2
+  - obj: {fileID: 8051862338358336381, guid: f5b06732b30db8040b9d467e6836454e, type: 3}
+    heightRange:
+      minimum: 1500
+      maximum: 1800
+    amount: 1
+  - obj: {fileID: 8051862338358336381, guid: d1cf10ac88deeae4fbd24bae6ffe88ad, type: 3}
+    heightRange:
+      minimum: 1300
+      maximum: 1800
+    amount: 3
+  - obj: {fileID: 8051862338358336381, guid: 762515ac065363248aef8bfa4c909f05, type: 3}
+    heightRange:
+      minimum: 800
+      maximum: 1600
+    amount: 8
+  - obj: {fileID: 8051862338358336381, guid: be5c9f3dea24d184694843b5fbb70592, type: 3}
+    heightRange:
+      minimum: 2000
+      maximum: 2500
+    amount: 8
+  - obj: {fileID: 1240150422307126208, guid: 2cfae7721369b944e9bd655be43c91a1, type: 3}
+    heightRange:
+      minimum: 300
+      maximum: 900
+    amount: 1
+  - obj: {fileID: 8051862338358336381, guid: 1e19602106c2ec8448b310edc9a0b658, type: 3}
+    heightRange:
+      minimum: 2000
+      maximum: 2800
+    amount: 3
+  - obj: {fileID: 8051862338358336381, guid: d4db6c80ddc3213418361719965632ca, type: 3}
+    heightRange:
+      minimum: 2000
+      maximum: 2800
+    amount: 5
+  - obj: {fileID: 8051862338358336381, guid: b9690482457b25e4587cc6b9d7541a11, type: 3}
+    heightRange:
+      minimum: 1900
+      maximum: 2400
+    amount: 4
+  - obj: {fileID: 8051862338358336381, guid: a971cf4093e994b48b8ccbd87307677d, type: 3}
+    heightRange:
+      minimum: 2500
+      maximum: 2800
+    amount: 4
+  - obj: {fileID: 8051862338358336381, guid: b9b4ab8bca7246f49b071e4b8cc39711, type: 3}
+    heightRange:
+      minimum: 2800
+      maximum: 2900
+    amount: 1
   playerStartingImpulse: 60
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}

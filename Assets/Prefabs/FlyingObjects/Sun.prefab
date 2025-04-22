@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6270402448051201990}
   - component: {fileID: 8239356787605029981}
-  - component: {fileID: 5359646958810283047}
+  - component: {fileID: 1184748402097882038}
   m_Layer: 0
-  m_Name: HanggliderPrefab
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c429a5d173667243819e2a5f3b9e3cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7e1512ccb48d093479cd92efcfb55883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5359646958810283047
+--- !u!114 &1184748402097882038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,15 +94,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8051862338358336381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42f86eec9cb79cc4d8d7ab0897051044, type: 3}
+  m_Script: {fileID: 11500000, guid: 513b9dd366ff6bc418fa9f9f2337f1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 6
-  mass: 100
-  left: -5
-  right: 5
-  minSpeed: 0.2
-  maxSpeed: 1.4
-  minAmplitude: 4
-  maxAmplitude: 10
-  flipSprite: 1
+  height: 0
+  mass: 18
+  left: -2
+  right: 2
+  minModulatorFreq: 1.2
+  maxModulatorFreq: 1.8
+  shakeAmount: 17
+  biasPower: 3
+  maxAngle: 25
+  minScale: 1
+  maxScale: 1.15

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8239356787605029981}
   - component: {fileID: 5359646958810283047}
   m_Layer: 0
-  m_Name: HanggliderPrefab
+  m_Name: Pterodactyl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c429a5d173667243819e2a5f3b9e3cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3442b22abab56864b9b094d1b18e963e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 6
-  mass: 100
+  mass: 800
   left: -5
   right: 5
-  minSpeed: 0.2
-  maxSpeed: 1.4
-  minAmplitude: 4
-  maxAmplitude: 10
+  minSpeed: 0.7
+  maxSpeed: 1.6
+  minAmplitude: 12
+  maxAmplitude: 16
   flipSprite: 1

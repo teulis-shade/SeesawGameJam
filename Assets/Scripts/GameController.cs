@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     [Range(0f, 150f)]
     public double playerStartingImpulse = 0f;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+
     [System.Serializable]
     public class Range
     {
@@ -49,6 +52,7 @@ public class GameController : MonoBehaviour
 
     private void DisplayEndScreen()
     {
+        loseScreen.SetActive(true);
         //Display Max Height
         //Display End Mass
         //Display Cause of Death

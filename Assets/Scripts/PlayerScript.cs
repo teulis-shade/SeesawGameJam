@@ -33,6 +33,9 @@ public class PlayerScript : MonoBehaviour
     public double terminalVelocity;
     public bool active;
 
+    [Header("Mass Transfer")]
+    public AnimationCurve massCurve;
+    [SerializeField] private bool debugMassCurve = false;
 
     [Header("References")]
     public PlayerScript otherPlayer;
@@ -141,7 +144,9 @@ public class PlayerScript : MonoBehaviour
 
     public void IncreaseMass(double otherMass)
     {
-        mass += otherMass;
+        float transferred = massCurve.Evaluate((float) otherMass);
+        mass += massCurve.Evaluate((float) otherMass);
+        if (debugMassCurve) Debug.Log($"Picked up {otherMass}kg → Transferred {transferred}kg");
         UpdateBagMass();
     }
 

@@ -749,12 +749,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 70
-  gravity: 30
-  referenceArea: 0.14
-  dragCoefficient: 0.7
+  gravity: 15
+  referenceArea: 2
+  dragCoefficient: 0.5
   useCustomDensity: 0
   customAirDensity: 1.21
-  planetRadius: 6371
+  planetRadius: 20000
   groundLevel: 2
   minimumImpulse: 0.5
   density: 0
@@ -769,44 +769,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.6
-      outSlope: 0.6
+      inSlope: 1.8
+      outSlope: 1.8
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 500
-      value: 300
-      inSlope: 0.4
-      outSlope: 0.4
-      tangentMode: 34
+      time: 80
+      value: 144
+      inSlope: 1.8
+      outSlope: 0.14999998
+      tangentMode: 5
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1000
-      value: 400
-      inSlope: 0.17500001
-      outSlope: 0.17500001
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 5000
-      value: 1000
-      inSlope: 0.125
-      outSlope: 0.125
-      tangentMode: 34
+      time: 90
+      value: 108
+      inSlope: 0
+      outSlope: 0.99818367
+      tangentMode: 65
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 10000
-      value: 1500
-      inSlope: 0.1
-      outSlope: 0.1
+      value: 10000
+      inSlope: 0.99818367
+      outSlope: 0.99818367
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -1179,12 +1170,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 70
-  gravity: 30
-  referenceArea: 0.14
-  dragCoefficient: 0.7
+  gravity: 15
+  referenceArea: 2
+  dragCoefficient: 0.5
   useCustomDensity: 0
   customAirDensity: 1.21
-  planetRadius: 6371
+  planetRadius: 20000
   groundLevel: 2
   minimumImpulse: 0.5
   density: 0
@@ -1199,44 +1190,35 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.6
-      outSlope: 0.6
+      inSlope: 1.8
+      outSlope: 1.8
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 500
-      value: 300
-      inSlope: 0.4
-      outSlope: 0.4
-      tangentMode: 34
+      time: 80
+      value: 144
+      inSlope: 1.8
+      outSlope: 0.14999998
+      tangentMode: 5
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1000
-      value: 400
-      inSlope: 0.17500001
-      outSlope: 0.17500001
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 5000
-      value: 1000
-      inSlope: 0.125
-      outSlope: 0.125
-      tangentMode: 34
+      time: 90
+      value: 108
+      inSlope: 0
+      outSlope: 0.99818367
+      tangentMode: 65
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 10000
-      value: 1500
-      inSlope: 0.1
-      outSlope: 0.1
+      value: 10000
+      inSlope: 0.99818367
+      outSlope: 0.99818367
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -1472,9 +1454,9 @@ MonoBehaviour:
     amount: 8
   - obj: {fileID: 8051862338358336381, guid: 825150242e2592c4e8384d41cfe1a320, type: 3}
     heightRange:
-      minimum: 15
+      minimum: 10
       maximum: 100
-    amount: 8
+    amount: 12
   - obj: {fileID: 1240150422307126208, guid: ae7bb4629fa701249bc5943989d23108, type: 3}
     heightRange:
       minimum: 200
@@ -1484,7 +1466,7 @@ MonoBehaviour:
     heightRange:
       minimum: 10
       maximum: 70
-    amount: 6
+    amount: 8
   - obj: {fileID: 8051862338358336381, guid: e59f892d573853b40af7acf50090d21c, type: 3}
     heightRange:
       minimum: 700
@@ -1580,7 +1562,7 @@ MonoBehaviour:
       minimum: 2800
       maximum: 2900
     amount: 1
-  playerStartingImpulse: 60
+  playerStartingImpulse: 35
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}
 --- !u!114 &519420035
@@ -2222,6 +2204,10 @@ PrefabInstance:
     - target: {fileID: 4569560756392555129, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8274935144671709618, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
+      propertyPath: globalVolume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

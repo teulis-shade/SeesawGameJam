@@ -7,11 +7,11 @@ public class PlayerScript : MonoBehaviour
 {
 
     [Header("Configurable Values")]
-    [Range(10f, 300f)]
+    [Range(0f, 100000f)]
     public double mass = 100f; // kg
     [Range(-40f, 40f)]
     public float gravity = 9.81f; // m / s^2
-    [Range(0.01f, 5f)]
+    [Range(0.01f, 10f)]
     public float referenceArea = 0.140f; // m^2
     [Range(0f, 2f)]
     public float dragCoefficient = 0.7f;
@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviour
     [Range(0.01f, 1000f)]
     public float customAirDensity = 1.21f; // kg / m^3
     [Range(2000, 70000)]
-    public int planetRadius = 6371; // km
+    public int planetRadius = 20000; // m
     [Range(-5f, 10f)]
     public float groundLevel = 2f; // m
     [Range(0f, 10f)]
@@ -49,6 +49,7 @@ public class PlayerScript : MonoBehaviour
     public float rightBoundary;
 
     public Animator animator;
+    private double apexHeight = 0;
 
     public enum Side
     {
@@ -88,7 +89,7 @@ public class PlayerScript : MonoBehaviour
         {
             return;
         }
-        double scaledPlanetRadius = planetRadius * 1000; // km to m
+        double scaledPlanetRadius = planetRadius * 1;
         double gravityAcceleration = gravity * math.pow(scaledPlanetRadius / (scaledPlanetRadius + currHeight), 2);
         double weight = mass * -gravityAcceleration;
         double calculatedDensity = .0000233341d * 101325d * math.pow(1d - 0.0000225577 * currHeight, 5.25588d);
@@ -106,6 +107,7 @@ public class PlayerScript : MonoBehaviour
         velocity += acceleration * Time.fixedDeltaTime;
         double prevHeight = currHeight;
         currHeight += velocity * Time.fixedDeltaTime;
+        apexHeight = math.max(apexHeight, currHeight);
         transform.position = new Vector3(transform.position.x, (float)currHeight);
         if (currHeight < groundLevel)
         {
@@ -181,9 +183,12 @@ public class PlayerScript : MonoBehaviour
         // int massSign = massDifference < 0 ? -1 : 1;
         // impulseVelocity += math.pow(math.abs(massDifference), 1d / 3d) * massSign;
         //double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
-        double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
+        // double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
+        double energyLost = mass * gravity * apexHeight;
+        double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.8));
         impulseVelocity += minimumImpulse; // Seesaw minimum impulse velocity
         otherPlayer.StartMovement(impulseVelocity);
+        apexHeight = currHeight;
         active = false;
     }
 

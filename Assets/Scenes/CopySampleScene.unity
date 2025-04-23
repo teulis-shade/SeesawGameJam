@@ -585,12 +585,20 @@ MonoBehaviour:
   currHeight: 1
   terminalVelocity: 0
   active: 1
+  massCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  debugMassCurve: 0
   otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
   backpack: {fileID: 231633422}
   side: 0
   leftBoundary: 0
   rightBoundary: 0
+  animator: {fileID: 0}
 --- !u!4 &403961452
 Transform:
   m_ObjectHideFlags: 0
@@ -856,12 +864,20 @@ MonoBehaviour:
   currHeight: 0
   terminalVelocity: 0
   active: 0
+  massCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  debugMassCurve: 0
   otherPlayer: {fileID: 403961451}
   seesaw: {fileID: 0}
   backpack: {fileID: 370631430}
   side: 1
   leftBoundary: 0
   rightBoundary: 0
+  animator: {fileID: 0}
 --- !u!4 &503899003
 Transform:
   m_ObjectHideFlags: 0
@@ -1070,6 +1086,8 @@ MonoBehaviour:
       maximum: 400
     amount: 10
   playerStartingImpulse: 43
+  winScreen: {fileID: 0}
+  loseScreen: {fileID: 0}
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,6 +1770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1189221881}
   - component: {fileID: 1189221882}
+  - component: {fileID: 1189221883}
   m_Layer: 0
   m_Name: ParallaxController
   m_TagString: Untagged
@@ -1792,7 +1811,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189221880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4fc224a89d6d3d4f8e231e6625d02e8, type: 3}
   m_Name: 
@@ -1819,6 +1838,44 @@ MonoBehaviour:
   - layer: {fileID: 1911470301}
     parallaxMultiplier: {x: 0.2, y: 0.915}
   - layer: {fileID: 995772774}
+    parallaxMultiplier: {x: 0, y: 0}
+--- !u!114 &1189221883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189221880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879b32d34e55660448c081e5eb743df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalSize: {x: 60, y: 6000}
+  cameraUnitSize: {x: 36, y: 30}
+  movementMultiplier: {x: 0.3, y: 0.977693}
+  layers:
+  - spriteRenderer: {fileID: 556534525}
+    parallaxMultiplier: {x: 0.03333, y: 0.99895}
+  - spriteRenderer: {fileID: 1886649242}
+    parallaxMultiplier: {x: 0.03333, y: 1}
+  - spriteRenderer: {fileID: 1636172046}
+    parallaxMultiplier: {x: 0.16667, y: 0.95798}
+  - spriteRenderer: {fileID: 933070099}
+    parallaxMultiplier: {x: 0.33333, y: 0.92647}
+  - spriteRenderer: {fileID: 1434246062}
+    parallaxMultiplier: {x: 0.5, y: 0.88445}
+  - spriteRenderer: {fileID: 1466845325}
+    parallaxMultiplier: {x: 0.66667, y: 0.82143}
+  - spriteRenderer: {fileID: 760886630}
+    parallaxMultiplier: {x: 0.83333, y: 0.80042}
+  - spriteRenderer: {fileID: 497017735}
+    parallaxMultiplier: {x: 1, y: 0.7479}
+  - spriteRenderer: {fileID: 1844667328}
+    parallaxMultiplier: {x: 0.66667, y: 0.98529}
+  - spriteRenderer: {fileID: 1911470302}
+    parallaxMultiplier: {x: 0.66667, y: 0.96113}
+  - spriteRenderer: {fileID: 995772775}
     parallaxMultiplier: {x: 0, y: 0}
 --- !u!1 &1304133175
 GameObject:

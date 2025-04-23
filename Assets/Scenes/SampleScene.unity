@@ -2455,6 +2455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551278293}
   - component: {fileID: 1551278292}
+  - component: {fileID: 1551278294}
   m_Layer: 0
   m_Name: ParallaxController
   m_TagString: Untagged
@@ -2469,7 +2470,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551278291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4fc224a89d6d3d4f8e231e6625d02e8, type: 3}
   m_Name: 
@@ -2523,6 +2524,44 @@ Transform:
   - {fileID: 410645998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1551278294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551278291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879b32d34e55660448c081e5eb743df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goalSize: {x: 59, y: 2900}
+  cameraUnitSize: {x: 36, y: 20}
+  movementMultiplier: {x: 0.3, y: 0.977693}
+  layers:
+  - spriteRenderer: {fileID: 1302886527}
+    parallaxMultiplier: {x: 0.03333, y: 0.99895}
+  - spriteRenderer: {fileID: 672142682}
+    parallaxMultiplier: {x: 0.03333, y: 1}
+  - spriteRenderer: {fileID: 896162218}
+    parallaxMultiplier: {x: 0.16667, y: 0.95798}
+  - spriteRenderer: {fileID: 2139125455}
+    parallaxMultiplier: {x: 0.33333, y: 0.92647}
+  - spriteRenderer: {fileID: 1752282500}
+    parallaxMultiplier: {x: 0.5, y: 0.88445}
+  - spriteRenderer: {fileID: 1552428530}
+    parallaxMultiplier: {x: 0.66667, y: 0.82143}
+  - spriteRenderer: {fileID: 1272981527}
+    parallaxMultiplier: {x: 0.83333, y: 0.80042}
+  - spriteRenderer: {fileID: 484536571}
+    parallaxMultiplier: {x: 1, y: 0.7479}
+  - spriteRenderer: {fileID: 1979197103}
+    parallaxMultiplier: {x: 0.66667, y: 0.98529}
+  - spriteRenderer: {fileID: 853844844}
+    parallaxMultiplier: {x: 0.66667, y: 0.96113}
+  - spriteRenderer: {fileID: 410645999}
+    parallaxMultiplier: {x: 0, y: 0}
 --- !u!1 &1552428528
 GameObject:
   m_ObjectHideFlags: 0

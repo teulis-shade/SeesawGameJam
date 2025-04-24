@@ -73,7 +73,7 @@ public class PlayerScript : MonoBehaviour
         public AnimatorController controller;
     }
 
-
+    public Character character;
     private void Start()
     {
         gc = FindObjectOfType<GameController>();
@@ -234,6 +234,7 @@ public class PlayerScript : MonoBehaviour
             if (name == ch.character)
             {
                 animator.runtimeAnimatorController = ch.controller;
+                gc.UpdateCharacter(name);
                 return;
             }
         }

@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 
     public GameObject winScreen;
     public GameObject loseScreen;
+    private MusicController musicController;
 
     [System.Serializable]
     public class Range
@@ -31,6 +32,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         InitializeObjects();
+        musicController = GetComponent<MusicController>();
         activePlayer.StartMovement(playerStartingImpulse);
     }
 
@@ -103,5 +105,10 @@ public class GameController : MonoBehaviour
     public void UpdateCamera(double height)
     {
         cam.UpdateCamera(height);
+    }
+
+    public void UpdateCharacter(PlayerScript.Character character)
+    {
+        musicController.ChangeMusic(character);
     }
 }

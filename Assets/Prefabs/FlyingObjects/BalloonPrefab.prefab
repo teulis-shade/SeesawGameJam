@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 0
   mass: 250
-  left: 3
+  left: -3
   right: 3
   minSpeed: 0.1
   maxSpeed: 0.8

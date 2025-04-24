@@ -230,6 +230,7 @@ public class PlayerScript : MonoBehaviour
 
     public void SetCharacter(Character name)
     {
+        gc = FindObjectOfType<GameController>();
         foreach (CharacterStats ch in characterStatStorage)
         {
             if (name == ch.character)

@@ -34,11 +34,6 @@ public class GameController : MonoBehaviour
         activePlayer.StartMovement(playerStartingImpulse);
     }
 
-    private void Start()
-    {
-        InitializeGame();
-    }
-
     public void InitializeGame()
     {
         InitializeObjects();

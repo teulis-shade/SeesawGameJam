@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
     {
         InitializeObjects();
         musicController = GetComponent<MusicController>();
+        musicController.Initialize();
         activePlayer.StartMovement(playerStartingImpulse);
     }
 
@@ -109,7 +110,6 @@ public class GameController : MonoBehaviour
 
     public void UpdateCharacter(PlayerScript.Character character)
     {
-        musicController = GetComponent<MusicController>();
         musicController.ChangeMusic(character);
     }
 }

@@ -16,7 +16,7 @@ public class MusicController : MonoBehaviour
     private AudioSource source;
     private AudioSource characterSource;
 
-    private void Start()
+    public void Initialize()
     {
         source = GetComponent<AudioSource>();
         characterSource = gameObject.AddComponent<AudioSource>();

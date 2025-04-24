@@ -79,20 +79,20 @@ public class PlayerScript : MonoBehaviour
         gc = FindObjectOfType<GameController>();
         seesaw = FindObjectOfType<Seesaw>();
         animator = GetComponent<Animator>();
+        if (active)
+        {
+            gc.activePlayer = this;
+            gc.StartGame();
+        }
         if (side == Side.RIGHT)
         {
             GetComponent<SpriteRenderer>().flipX = true;
-            SetCharacter(Character.THIEF);
+            SetCharacter(Character.VACUUM);
         }
         else
         {
             GetComponent<SpriteRenderer>().flipX = false;
             SetCharacter(Character.HANDBAG);
-        }
-        if (active)
-        {
-            gc.activePlayer = this;
-            gc.StartGame();
         }
     }
 

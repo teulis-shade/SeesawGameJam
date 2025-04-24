@@ -184,6 +184,7 @@ public class PlayerScript : MonoBehaviour
 
     public void StartMovement(double startVelocity)
     {
+        gc.UpdateCharacter(character);
         UpdateBagMass();
         if (startVelocity < 0)
         {

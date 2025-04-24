@@ -115,8 +115,25 @@ public class NearestArrowsManager : MonoBehaviour
             List<FlyingObject> newClosestFlyingObjects = new List<FlyingObject>();
             int i = ret_mid;
             int j = ret_mid;
-            while (((i > -1) && (j < height)) && (newClosestFlyingObjects.Count < arrowNum))
+            while (((i > -1) || (j < height)) && (newClosestFlyingObjects.Count < arrowNum))
             {
+                //get higher if there are none lower
+                if (i == -1)
+                {
+                    newClosestFlyingObjects.Add(yesFlyList[j]);
+                    j += 1;
+                    continue;
+                }
+
+                //get lower if there are none higher
+                if (j == height)
+                {
+                    newClosestFlyingObjects.Add(yesFlyList[i]);
+                    i -= 1;
+                    continue;
+                }
+
+
                 if (Mathf.Sign((float) gc.activePlayer.velocity) < 0) {
                     //we going down baby
                     newClosestFlyingObjects.Add(yesFlyList[i]);

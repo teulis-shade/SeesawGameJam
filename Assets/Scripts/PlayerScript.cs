@@ -15,6 +15,8 @@ public class PlayerScript : MonoBehaviour
     public float referenceArea = 0.140f; // m^2
     [Range(0f, 2f)]
     public float dragCoefficient = 0.7f;
+    [Range(0.10f, 0.50f)]
+    public float dragPower = 0.5f;
     [SerializeField] private bool useCustomDensity = false;
     [Range(0.01f, 1000f)]
     public float customAirDensity = 1.21f; // kg / m^3
@@ -28,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     [Header("Player State")]
     public double density;
     public double velocity;
+    public double gravityAcceleration;
     public double acceleration;
     public double currHeight;
     public double terminalVelocity;
@@ -100,7 +103,7 @@ public class PlayerScript : MonoBehaviour
     private double CalculateTerminalVelocity(double weight)
     {
         double innerValue = 2 * weight / (dragCoefficient * density * referenceArea);
-        return math.pow(math.abs(innerValue), 0.5);
+        return math.pow(math.abs(innerValue), dragPower);
     }
 
     private void FixedUpdate()
@@ -110,11 +113,11 @@ public class PlayerScript : MonoBehaviour
             return;
         }
         double scaledPlanetRadius = planetRadius * 1;
-        double gravityAcceleration = gravity * math.pow(scaledPlanetRadius / (scaledPlanetRadius + currHeight), 2);
+        gravityAcceleration = gravity * math.pow(scaledPlanetRadius / (scaledPlanetRadius + currHeight), 2);
         double weight = mass * -gravityAcceleration;
         double calculatedDensity = .0000233341d * 101325d * math.pow(1d - 0.0000225577 * currHeight, 5.25588d);
         density = useCustomDensity ? customAirDensity : calculatedDensity;
-        double airRes = dragCoefficient * density * (math.pow(velocity, 2) / 2) * referenceArea;
+        double airRes = dragCoefficient * density * (math.pow(math.abs(velocity), 1 / dragPower) / 2) * referenceArea;
         terminalVelocity = CalculateTerminalVelocity(weight);
         if (velocity >= 0)
         {
@@ -206,8 +209,9 @@ public class PlayerScript : MonoBehaviour
         //double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
         // double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
         double energyLost = mass * gravity * apexHeight;
-        double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.8));
+        double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.3));
         impulseVelocity += minimumImpulse; // Seesaw minimum impulse velocity
+        //Debug.Log($"@@@@@ Impulse Velocity {impulseVelocity} - Peak {apexHeight}");
         otherPlayer.StartMovement(impulseVelocity);
         apexHeight = currHeight;
         active = false;

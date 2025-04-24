@@ -573,15 +573,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 70
   gravity: 15
-  referenceArea: 2
+  referenceArea: 1.5
   dragCoefficient: 0.5
+  dragPower: 0.42
   useCustomDensity: 0
   customAirDensity: 1.21
-  planetRadius: 20000
+  planetRadius: 6000
   groundLevel: 2
   minimumImpulse: 0.5
   density: 0
   velocity: 0
+  gravityAcceleration: 0
   acceleration: 0
   currHeight: 1
   terminalVelocity: 0
@@ -592,36 +594,36 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1.8
-      outSlope: 1.8
+      inSlope: 1.5
+      outSlope: 1.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 80
-      value: 144
-      inSlope: 1.8
-      outSlope: 0.14999998
-      tangentMode: 5
+      time: 100
+      value: 150
+      inSlope: 1.5
+      outSlope: 0.1875
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 90
-      value: 108
-      inSlope: 0
-      outSlope: 0.99818367
-      tangentMode: 65
+      time: 500
+      value: 225
+      inSlope: 0.1875
+      outSlope: 0.08157895
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 10000
-      value: 10000
-      inSlope: 0.99818367
-      outSlope: 0.99818367
-      tangentMode: 34
+      value: 1000
+      inSlope: 0.08157895
+      outSlope: 0.9949495
+      tangentMode: 5
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
@@ -1008,15 +1010,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mass: 70
   gravity: 15
-  referenceArea: 2
+  referenceArea: 1.5
   dragCoefficient: 0.5
+  dragPower: 0.42
   useCustomDensity: 0
   customAirDensity: 1.21
-  planetRadius: 20000
+  planetRadius: 6000
   groundLevel: 2
   minimumImpulse: 0.5
   density: 0
   velocity: 0
+  gravityAcceleration: 0
   acceleration: 0
   currHeight: 0
   terminalVelocity: 0
@@ -1027,36 +1031,36 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1.8
-      outSlope: 1.8
+      inSlope: 1.5
+      outSlope: 1.5
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 80
-      value: 144
-      inSlope: 1.8
-      outSlope: 0.14999998
-      tangentMode: 5
+      time: 100
+      value: 150
+      inSlope: 1.5
+      outSlope: 0.1875
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 90
-      value: 108
-      inSlope: 0
-      outSlope: 0.99818367
-      tangentMode: 65
+      time: 500
+      value: 225
+      inSlope: 0.1875
+      outSlope: 0.08157895
+      tangentMode: 69
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 10000
-      value: 10000
-      inSlope: 0.99818367
-      outSlope: 0.99818367
-      tangentMode: 34
+      value: 1000
+      inSlope: 0.08157895
+      outSlope: 0.9949495
+      tangentMode: 5
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
@@ -1411,7 +1415,7 @@ MonoBehaviour:
       minimum: 2800
       maximum: 2900
     amount: 1
-  playerStartingImpulse: 35
+  playerStartingImpulse: 45
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}
 --- !u!1 &619394800

@@ -11,7 +11,7 @@ public class MusicController : MonoBehaviour
         public AudioClip music;
     }
 
-    List<CharacterMusic> musicStorage;
+    public List<CharacterMusic> musicStorage;
 
     private AudioSource source;
     private AudioSource characterSource;

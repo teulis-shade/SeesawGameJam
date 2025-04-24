@@ -32,7 +32,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BugItemCatch
+  m_Name: ThiefItemCatch
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d618a44c7c251fa4ea16a711b5c03a17, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1436867b16a42484ca4851eebb8358c3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -58,7 +58,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BugCatcher
+  m_Name: ThiefCatcher
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: CatchItem
@@ -101,7 +101,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 96c27c725a32e9a469fd15d554250953, type: 2}
+  m_Motion: {fileID: 7400000, guid: a21a09e561c90f44cb3554261a3e5336, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

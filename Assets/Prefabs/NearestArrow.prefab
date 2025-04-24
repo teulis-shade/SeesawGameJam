@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flyingObject: {fileID: 0}
-  arrow_displacement: 200
+  arrow_displacement: 100
 --- !u!222 &8310641501505006879
 CanvasRenderer:
   m_ObjectHideFlags: 0

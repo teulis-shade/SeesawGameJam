@@ -809,6 +809,19 @@ MonoBehaviour:
   otherPlayer: {fileID: 503899002}
   seesaw: {fileID: 0}
   backpack: {fileID: 231633422}
+  characterStatStorage:
+  - character: 0
+    Name: Bug Catcher
+    controller: {fileID: 9100000, guid: 85258af673e32c24a94a5575b26fb857, type: 2}
+  - character: 1
+    Name: Vacuum Man
+    controller: {fileID: 9100000, guid: 9b1a19e723dcc474c906763a45599e78, type: 2}
+  - character: 2
+    Name: Handbag Woman
+    controller: {fileID: 9100000, guid: 75e01742513394149b9b233c5ecd99f0, type: 2}
+  - character: 3
+    Name: Thief
+    controller: {fileID: 9100000, guid: 2ce4c2721a4dd4349a6377de8aa76758, type: 2}
   side: 0
   leftBoundary: -3
   rightBoundary: 3
@@ -839,7 +852,7 @@ Animator:
   m_GameObject: {fileID: 403961449}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 85258af673e32c24a94a5575b26fb857, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2ce4c2721a4dd4349a6377de8aa76758, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1230,6 +1243,19 @@ MonoBehaviour:
   otherPlayer: {fileID: 403961451}
   seesaw: {fileID: 0}
   backpack: {fileID: 370631430}
+  characterStatStorage:
+  - character: 0
+    Name: Bug Catcher
+    controller: {fileID: 9100000, guid: 85258af673e32c24a94a5575b26fb857, type: 2}
+  - character: 1
+    Name: Vacuum Man
+    controller: {fileID: 9100000, guid: 9b1a19e723dcc474c906763a45599e78, type: 2}
+  - character: 2
+    Name: Handbag Woman
+    controller: {fileID: 9100000, guid: 75e01742513394149b9b233c5ecd99f0, type: 2}
+  - character: 3
+    Name: Thief
+    controller: {fileID: 9100000, guid: 2ce4c2721a4dd4349a6377de8aa76758, type: 2}
   side: 1
   leftBoundary: -3
   rightBoundary: 3

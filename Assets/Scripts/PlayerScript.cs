@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
+using UnityEditor.Animations;
 
 public class PlayerScript : MonoBehaviour
 {
-
     [Header("Configurable Values")]
     [Range(0f, 100000f)]
     public double mass = 100f; // kg
@@ -42,6 +42,7 @@ public class PlayerScript : MonoBehaviour
     public Seesaw seesaw;
     private GameController gc;
     public GameObject backpack;
+    public List<CharacterStats> characterStatStorage;
 
     [Header("Other Config")]
     public Side side;
@@ -53,8 +54,24 @@ public class PlayerScript : MonoBehaviour
 
     public enum Side
     {
-        LEFT, RIGHT 
+        LEFT, RIGHT
     };
+
+    public enum Character
+    {
+        BUG,
+        VACUUM,
+        HANDBAG,
+        THIEF,
+    }
+
+    [System.Serializable]
+    public class CharacterStats 
+    {
+        public Character character;
+        public string Name;
+        public AnimatorController controller;
+    }
 
 
     private void Start()
@@ -65,10 +82,12 @@ public class PlayerScript : MonoBehaviour
         if (side == Side.RIGHT)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            SetCharacter(Character.THIEF);
         }
         else
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            SetCharacter(Character.HANDBAG);
         }
         if (active)
         {
@@ -206,5 +225,18 @@ public class PlayerScript : MonoBehaviour
         {
             gc.GameOver();
         }
+    }
+
+    public void SetCharacter(Character name)
+    {
+        foreach (CharacterStats ch in characterStatStorage)
+        {
+            if (name == ch.character)
+            {
+                animator.runtimeAnimatorController = ch.controller;
+                return;
+            }
+        }
+        Debug.LogError("Attempting to set to a character that doesn't exist. Make sure that " + name.ToString() + " is inside the character stat storage in the playerScript.");
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class GameController : MonoBehaviour
 
     public GameObject winScreen;
     public GameObject loseScreen;
-    private MusicController musicController;
 
     [System.Serializable]
     public class Range
@@ -29,6 +29,8 @@ public class GameController : MonoBehaviour
         public int amount;
     }
 
+    public event Action<PlayerScript.Character> OnCharacterChanged;
+
     public void StartGame()
     {
         activePlayer.StartMovement(playerStartingImpulse);
@@ -37,8 +39,6 @@ public class GameController : MonoBehaviour
     public void InitializeGame()
     {
         InitializeObjects();
-        musicController = GetComponent<MusicController>();
-        musicController.Initialize();
     }
 
     public void GameOver()
@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour
             for (int i = 0; i < obj.amount; i++)
             {
                 FlyingObject flyer = Instantiate(obj.obj).GetComponent<FlyingObject>();
-                flyer.height = Random.Range(obj.heightRange.minimum, obj.heightRange.maximum);
+                flyer.height = UnityEngine.Random.Range(obj.heightRange.minimum, obj.heightRange.maximum);
                 flyingObjects.Add(flyer);
                 flyer.Initialize();
             }
@@ -114,7 +114,6 @@ public class GameController : MonoBehaviour
 
     public void UpdateCharacter(PlayerScript.Character character)
     {
-        musicController.GetComponent<MusicController>();
-        musicController.ChangeMusic(character);
+        OnCharacterChanged?.Invoke(character);
     }
 }

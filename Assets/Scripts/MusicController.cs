@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MusicController : MonoBehaviour
 {
+    public AudioSource source;
+
     [System.Serializable]
     public class CharacterMusic
     {
@@ -12,13 +14,6 @@ public class MusicController : MonoBehaviour
     }
 
     public List<CharacterMusic> musicStorage;
-
-    private AudioSource source;
-
-    public void Initialize()
-    {
-        source = GetComponent<AudioSource>();
-    }
 
     public void ChangeMusic(PlayerScript.Character character)
     {

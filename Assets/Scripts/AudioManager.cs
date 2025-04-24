@@ -13,8 +13,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         gc = FindObjectOfType<GameController>();
-        windFX = GetComponent<WindFXController>();
-        musicController = GetComponent<MusicController>();
+        windFX = GetComponentInChildren<WindFXController>();
+        musicController = GetComponentInChildren<MusicController>();
         gc.OnCharacterChanged += musicController.ChangeMusic;
     }
 

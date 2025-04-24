@@ -102,6 +102,8 @@ MonoBehaviour:
   mass: 250
   left: -3
   right: 3
+  objectName: 
+  description: 
   minSpeed: 0.1
   maxSpeed: 0.8
   minAmplitude: 1
@@ -119,7 +121,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -7822168993654855918, guid: fa4b379d9eaedff45bf0819911ac70f2, type: 2}
   m_audioClip: {fileID: 8300000, guid: a4ca332c9867f5941ac765205edafff8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0

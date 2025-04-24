@@ -103,6 +103,8 @@ MonoBehaviour:
   mass: 10000
   left: -1
   right: 1
+  objectName: 
+  description: 
   minSpeed: 0.1
   maxSpeed: 0.3
   minAmplitude: 13
@@ -219,5 +221,5 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 77b0da40394c5c64ba8dd035abce21b3, type: 3}
   - {fileID: 8300000, guid: 1cba12bce6354fe46abc255e86d972ab, type: 3}
-  minDelay: 1
-  maxDelay: 5
+  minDelay: 2.5
+  maxDelay: 6.5

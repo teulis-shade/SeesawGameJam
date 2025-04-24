@@ -204,7 +204,7 @@ public class PlayerScript : MonoBehaviour
         //double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
         // double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
         double energyLost = mass * gravity * apexHeight;
-        double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.8));
+        double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass));
         impulseVelocity += minimumImpulse; // Seesaw minimum impulse velocity
         otherPlayer.StartMovement(impulseVelocity);
         apexHeight = currHeight;

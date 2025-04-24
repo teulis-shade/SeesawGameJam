@@ -106,25 +106,36 @@ public class NearestArrowsManager : MonoBehaviour
         //get nearest things
 
 
-        //Debug.Log(ret_mid);
-        /*
-        Debug.Log("john");
-        Debug.Log(min);
-        Debug.Log(max);
-        Debug.Log("snow");
-        */
+
         if (ret_mid != -1)
         {
-            // Debug.Log("passed part 1");
-
             //PART 1: RUN LOOP TO GET arrowNum NEW CLOSEST FLYING OBJECTS
+
+            //VERSION 2: get nearest based on player direction
             List<FlyingObject> newClosestFlyingObjects = new List<FlyingObject>();
             int i = ret_mid;
             int j = ret_mid;
-            //while ((i > -1 && j < height) || (closestArrows.Count == arrowNum))
-            //while ((i > -1 && j < height) || (newClosestFlyingObjects.Count == arrowNum))
-            //while (((i > -1) && (j < height)) || (newClosestFlyingObjects.Count == arrowNum))
-            //while (((i > -1) || (j < height)) || (newClosestFlyingObjects.Count < arrowNum))
+            while (((i > -1) || (j < height)) && (newClosestFlyingObjects.Count < arrowNum))
+            {
+                if (Mathf.Sign((float) gc.activePlayer.velocity) > 0) {
+                    //we going down baby
+                    newClosestFlyingObjects.Add(yesFlyList[i]);
+                    i += 1;
+                }
+                else
+                {
+                    //we goin up baby
+                    newClosestFlyingObjects.Add(yesFlyList[j]);
+                    j -= 1;
+                }
+
+            }
+
+            //VERSION 1: get all nearest flying objects
+            /*
+            List<FlyingObject> newClosestFlyingObjects = new List<FlyingObject>();
+            int i = ret_mid;
+            int j = ret_mid;
             while (((i > -1) || (j < height)) && (newClosestFlyingObjects.Count < arrowNum))
             {
                 if (i == j)
@@ -141,8 +152,6 @@ public class NearestArrowsManager : MonoBehaviour
                     if (i > -1){
                         arrowBelow = MathF.Abs(yesFlyList[i].transform.position.y - find);
                     }else{
-                        //arrowBelow = float.NaN;
-
                         //REACH BELOW LIMIT
                         //get above forehead
                         newClosestFlyingObjects.Add(yesFlyList[j]);
@@ -175,26 +184,10 @@ public class NearestArrowsManager : MonoBehaviour
                         newClosestFlyingObjects.Add(yesFlyList[i]);
                         i -= 1;
                     }
-
-                    //find//target height
-                    //    yesFlyList[i]//choice 1
-                    //    yesFlyList[j]//choice 2
                 }
-            }
-            //Debug.Log("pagan");
-            // Debug.Log(newClosestFlyingObjects.Count);
-            // Debug.Log(i);
-            // Debug.Log(j);
-            // Debug.Log(height);
-            // Debug.Log("weon");
+            }*/
 
-            //TODO:
-            //also can deal with there being less than 5 flying objects left
-
-            // RUN LOOP AGAINST MY LIST(nearestArrows) TO CHECK THAT ALL arrowNum ARE COVERED
-            //foreach (NearestArrow na in nearestArrows)
-
-            //TRY 2
+            //PART 2
 
             //GET FLYING OJBECTS TO ASSIGN
             //At the end of this
@@ -230,47 +223,6 @@ public class NearestArrowsManager : MonoBehaviour
                     }
                 }
             }
-
-
-
-
-
-
-            //TRY 1
-            /*
-            List<FlyingObject> flyingObjectsToAssign = new List<FlyingObject>();
-            foreach (FlyingObject fo in newClosestFlyingObjects)
-            {
-                foreach (NearestArrow na in nearestArrows)
-                {
-                    FlyingObject toCheck = na.GetFlyingObject();
-                    if ((toCheck != null) && (toCheck == fo){
-                        break;
-                    }
-
-                    //if (na)
-
-                    flyingObjectsToAssign.Add(fo);
-
-                if (!nearestArrows.Contains(obj))
-                {
-                    newList.Add(obj);
-                }
-            }*/
-
-
-            //PART 2:
-            //RUN LOOP AGAINST MY LIST (nearestArrows) TO CHECK THAT ALL arrowNum ARE COVERED
-            //IF NOT ALL ARE COVERED:
-            //ASSIGN ARROWS WITH BAD POINTERS, TO POINT TO THE NEAREST OBJECTS
-            //NEEDS TO DEAL IF ALL 5 HAVE NONE ASSIGNED
-            //also can deal with there being less than 5 flying objects left
-
-
-            //List<string> list;
-            //List<string> list2;
-            //List<NearestArrow> results = newClosestArrows.Except(nearestArrows).ToList().AddRange(nearestArrows.Except(closestArrows));
-            //List<T> results = newClosestArrows.Except(nearestArrows).ToList();
         }
 
 

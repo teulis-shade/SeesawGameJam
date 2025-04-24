@@ -119,6 +119,7 @@ public class GameController : MonoBehaviour
 
     public void UpdateCharacter(PlayerScript.Character character)
     {
+        musicController.GetComponent<MusicController>();
         musicController.ChangeMusic(character);
     }
 }

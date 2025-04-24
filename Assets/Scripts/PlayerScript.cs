@@ -92,6 +92,7 @@ public class PlayerScript : MonoBehaviour
         if (active)
         {
             gc.activePlayer = this;
+            gc.InitializeGame();
             gc.StartGame();
         }
     }

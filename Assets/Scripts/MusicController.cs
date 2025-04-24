@@ -26,7 +26,7 @@ public class MusicController : MonoBehaviour
 
     public void ChangeMusic(PlayerScript.Character character)
     {
-        if (characterSource.isPlaying)
+        if (!characterSource.isPlaying)
         {
             source.Play();
             source.time = 0;
@@ -40,7 +40,9 @@ public class MusicController : MonoBehaviour
                 characterSource.clip = music.music;
                 characterSource.Play();
                 characterSource.time = characterTime;
+                return;
             }
         }
+        Debug.LogError("Attempting to change to a character that doesn't exist.");
     }
 }

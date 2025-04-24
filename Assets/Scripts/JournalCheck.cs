@@ -35,7 +35,7 @@ public class JournalCheck : MonoBehaviour
         return collectedEntries;
     }
 
-    public void GetObject(string objectName)
+    public void CollectObject(string objectName)
     {
         string key = objectName + "Gotten";
         if (!PlayerPrefs.HasKey(key) || PlayerPrefs.GetInt(key) == 0)

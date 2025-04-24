@@ -15,4 +15,10 @@ public class EditorFunctions
             journal.journalEntries.Add(new JournalCheck.JournalEntry(obj.obj.GetComponent<FlyingObject>().objectName, obj.obj.GetComponent<FlyingObject>().description, obj.obj.GetComponent<SpriteRenderer>().sprite));
         }
     }
+
+    [MenuItem("EditorFunctions/Clear Journal Memory")]
+    public static void ClearJournal()
+    {
+        GameObject.FindObjectOfType<JournalCheck>().ClearEntries();
+    }
 }

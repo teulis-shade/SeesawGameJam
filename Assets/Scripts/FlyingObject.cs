@@ -36,6 +36,7 @@ public class FlyingObject : MonoBehaviour
         spriteRenderer.enabled = false;
         isCollected = true;
         AudioSource audioSource = GetComponent<AudioSource>();
+        FindObjectOfType<JournalCheck>().CollectObject(name);
         if (audioSource != null && audioSource.isPlaying)
         {
             audioSource.transform.SetParent(null);

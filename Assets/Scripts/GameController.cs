@@ -31,10 +31,19 @@ public class GameController : MonoBehaviour
 
     public void StartGame()
     {
+        activePlayer.StartMovement(playerStartingImpulse);
+    }
+
+    private void Start()
+    {
+        InitializeGame();
+    }
+
+    public void InitializeGame()
+    {
         InitializeObjects();
         musicController = GetComponent<MusicController>();
         musicController.Initialize();
-        activePlayer.StartMovement(playerStartingImpulse);
     }
 
     public void GameOver()

@@ -11,6 +11,8 @@ public class FlyingObject : MonoBehaviour
     public double mass;
     public double left;
     public double right;
+    public string objectName;
+    public string description;
 
     public enum HitDirection
     {

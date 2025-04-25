@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee4b769e1ee3a041944a54ed3283045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConsumableData: {fileID: 0}
+  ConsumableData: {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
   inputPromptText: {fileID: 6435188630278287883}
 --- !u!1 &4766973588107099128
 GameObject:
@@ -1698,6 +1698,10 @@ PrefabInstance:
     - target: {fileID: 4475863800755123745, guid: 1ff5e3218ba11b84ba49439eb8f42b3a, type: 3}
       propertyPath: m_Name
       value: TopMassDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540985002552749622, guid: 1ff5e3218ba11b84ba49439eb8f42b3a, type: 3}
+      propertyPath: dangerColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4540985002552749622, guid: 1ff5e3218ba11b84ba49439eb8f42b3a, type: 3}
       propertyPath: dangerColor.b

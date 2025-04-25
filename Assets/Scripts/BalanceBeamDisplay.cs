@@ -39,7 +39,9 @@ public class BalanceBeamDisplay : MonoBehaviour
             double normLeft = leftMass / totalMass;
             double normRight = rightMass / totalMass;
             double massDifference = normLeft - normRight;
-            mappedAngle = Mathf.Lerp(leftRotationBound, rightRotationBound, ((float) massDifference + 1f) / 2f);
+            float md = (float) massDifference;
+            float curvedDifference = Mathf.Sign(md) * Mathf.Pow(Mathf.Abs(md), 0.2f);
+            mappedAngle = Mathf.Lerp(leftRotationBound, rightRotationBound, (curvedDifference + 1f) / 2f);
         }
 
         float clampedTargetAngle = Mathf.Clamp(mappedAngle, leftRotationBound, rightRotationBound);

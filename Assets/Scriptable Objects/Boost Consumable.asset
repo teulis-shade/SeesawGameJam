@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BoostConsumable
   activationKey: 32
   audioClip: {fileID: 8300000, guid: 00230554bc797f44a8c7c059c6eb3368, type: 3}
-  boostVelocity: 100
+  boostVelocity: 50

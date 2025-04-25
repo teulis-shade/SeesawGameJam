@@ -237,7 +237,6 @@ public class PlayerScript : MonoBehaviour
     public void SetCharacter(Character name)
     {
         gc = FindObjectOfType<GameController>();
-        Debug.Log("What's going on here");
         foreach (CharacterStats ch in characterStatStorage)
         {
             if (name == ch.character)

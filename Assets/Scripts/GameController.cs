@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public PlayerScript activePlayer;
     public CameraController cam;
     public List<FlyingObjectContainer> flyingObjectInit;
+    public List<ConsumableObject> startingConsumables;
+
     [Range(0f, 150f)]
     public double playerStartingImpulse = 0f;
 
@@ -30,6 +32,7 @@ public class GameController : MonoBehaviour
     }
 
     public event Action<PlayerScript.Character> OnCharacterChanged;
+    public event Action<ConsumableData> OnConsumableCollected;
 
     public void StartGame()
     {
@@ -99,6 +102,7 @@ public class GameController : MonoBehaviour
                 flyer.Initialize();
             }
         }
+        flyingObjects.AddRange(startingConsumables);
         flyingObjects.Sort((obj1, obj2) => obj1.height.CompareTo(obj2.height));
     }
 
@@ -115,5 +119,10 @@ public class GameController : MonoBehaviour
     public void UpdateCharacter(PlayerScript.Character character)
     {
         OnCharacterChanged?.Invoke(character);
+    }
+
+    public void TriggerConsumableCollected(ConsumableData consumable)
+    {
+        OnConsumableCollected?.Invoke(consumable);
     }
 }

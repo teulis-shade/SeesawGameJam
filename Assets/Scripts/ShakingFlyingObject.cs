@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShakingFlyingObject : FlyingObject
+public class ShakingFlyingObject : MassObject
 {
     [Header("Shake Config")]
     [SerializeField] private float minModulatorFreq = 1.2f;
@@ -12,7 +12,6 @@ public class ShakingFlyingObject : FlyingObject
     [Header("Pulse Config")]
     [SerializeField] private float minScale = 1.0f;
     [SerializeField] private float maxScale = 1.15f;
-
 
     private float phaseOffset;
     private float modulatorFreq;

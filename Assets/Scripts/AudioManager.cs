@@ -27,6 +27,4 @@ public class AudioManager : MonoBehaviour
     {
         gc.OnCharacterChanged -= musicController.ChangeMusic;
     }
-
-
 }

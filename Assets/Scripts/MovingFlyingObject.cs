@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovingFlyingObject : FlyingObject
+public class MovingFlyingObject : MassObject
 {
     [Header("Movement Config")]
     [SerializeField] private float minSpeed = 0.2f;

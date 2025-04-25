@@ -35,4 +35,9 @@ public class UI : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void LoadGameRoom()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

@@ -53,10 +53,11 @@ MonoBehaviour:
     description: Poor Johnny just wanted to fly his 30 kites in peace.
     sprite: {fileID: 21300000, guid: 88df3015aa9607940ab24c1abc7a6df1, type: 3}
   - name: Hot Air Balloon
-    description: 
+    description: You managed to avoid the freakish amount of burning gas somehow
+      and stored this inside your bag.
     sprite: {fileID: 21300000, guid: 37336097995151a4eab30fc3ac86c237, type: 3}
   - name: Beehive
-    description: 
+    description: Avoid the bees at all costs.
     sprite: {fileID: 21300000, guid: 463dddab21341c64e8c7b1fcfafe269d, type: 3}
   - name: Plane
     description: He was so happy. Look at his smile.
@@ -83,7 +84,8 @@ MonoBehaviour:
     description: On her way to her first day of school.
     sprite: {fileID: 21300000, guid: a9a9e5705aff56242bdaa3c118e8f0ee, type: 3}
   - name: Dragon
-    description: 
+    description: A flying lizard that is able to breathe fire. Unfortunately, no-one
+      will ever see it again, now that you have driven them to extinction.
     sprite: {fileID: 21300000, guid: 2f5f9c0d64af2ab4fb69341a54c99d2f, type: 3}
   - name: Pterodactyl
     description: Escapee from a wonderful amusement park. One of the few animals
@@ -100,7 +102,9 @@ MonoBehaviour:
       a friend.
     sprite: {fileID: 21300000, guid: 296ed1194f8ea8e43ab3b1bce9c7f4b3, type: 3}
   - name: Astronaut
-    description: 
+    description: Floated out of his spaceship. Keeps muttering something about Ground
+      Control. You are not morally cullpable for his death, since he was probably
+      about to die anyway.
     sprite: {fileID: 21300000, guid: f912c7a73df570948b961063f2e6e0ca, type: 3}
   - name: Yet another birb
     description: Legally distinct from birb

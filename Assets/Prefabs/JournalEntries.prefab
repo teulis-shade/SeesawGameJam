@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8880511014568613233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5638492064103454934}
+  - component: {fileID: 1286597412218127120}
+  m_Layer: 0
+  m_Name: JournalEntries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5638492064103454934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880511014568613233}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 707.92615, y: 65.48232, z: -6.86844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1286597412218127120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880511014568613233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75082d61fc6151e41acd0343babbe262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  journalEntries:
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 7c429a5d173667243819e2a5f3b9e3cf, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 88df3015aa9607940ab24c1abc7a6df1, type: 3}
+  - name: Hot Air Balloon
+    description: A couple thought it would be a good idea to get a scenic view of
+      the mountains.
+    sprite: {fileID: 21300000, guid: 37336097995151a4eab30fc3ac86c237, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 463dddab21341c64e8c7b1fcfafe269d, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: c8e541be5c0d69d4aa2fcec3810a7275, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 2d5b96733fcc7bb40a58b82cc9355e1f, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: a04b80a29ff110c48970bcd45355d071, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: cadd80a0b2db4e1409acfb841440a8a5, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: ccb341065c07142439543d026493efef, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 665e8d5a49bb8364cbe31673c6e52d6d, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: a9a9e5705aff56242bdaa3c118e8f0ee, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 2f5f9c0d64af2ab4fb69341a54c99d2f, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 3442b22abab56864b9b094d1b18e963e, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 4317488fb2245a244ab8852882c798f7, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 7e1512ccb48d093479cd92efcfb55883, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 296ed1194f8ea8e43ab3b1bce9c7f4b3, type: 3}
+  - name: Astronaut
+    description: Just a lonely astronaut flying in space.
+    sprite: {fileID: 21300000, guid: f912c7a73df570948b961063f2e6e0ca, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 48365dd8a8a66394c9b3163915986613, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: f6cd69b0c019f2d4a93a0c5bf6dae71f, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: bf9d3ae8625872b488c1fb72f7d596cb, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 2758086d031b3074eb5266f14dc5aa3a, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: e76d457946c0fdf43bb0ca72286f099f, type: 3}
+  - name: 
+    description: 
+    sprite: {fileID: 21300000, guid: 178cb60c366cf9c4fac0af954fa2b8e0, type: 3}

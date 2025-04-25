@@ -27,4 +27,14 @@ public class Achievements : MonoBehaviour
     {
 
     }
+
+    public void OnMouseDown()
+    {
+        OpenMenu();
+    }
+
+    private void OpenMenu()
+    {
+        
+    }
 }

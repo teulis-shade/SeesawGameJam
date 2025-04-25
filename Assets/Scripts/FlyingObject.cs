@@ -46,6 +46,7 @@ public abstract class FlyingObject : MonoBehaviour
         isCollected = true;
         // Start audio fade out if applicable
         AudioSource audioSource = GetComponent<AudioSource>();
+        FindObjectOfType<JournalCheck>().CollectObject(name);
         if (audioSource != null && audioSource.isPlaying)
         {
             audioSource.transform.SetParent(null);

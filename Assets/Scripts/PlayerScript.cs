@@ -197,6 +197,16 @@ public class PlayerScript : MonoBehaviour
         velocity = startVelocity;
     }
 
+    public void BeginAnimation()
+    {
+        transform.position = new Vector3(7.5f * (side == Side.LEFT ? -1 : 1), 3.5f);
+        seesaw.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = side == Side.RIGHT;
+        animator.SetTrigger("HitSeesaw");
+        otherPlayer.animator.SetTrigger("Jump");
+        seesaw.animator.SetTrigger("HitSeesaw");
+        active = false;
+    }
+
     public void HitSeesaw()
     {
         // double massDifference = mass - otherPlayer.mass;
@@ -215,18 +225,17 @@ public class PlayerScript : MonoBehaviour
         //Debug.Log($"@@@@@ Impulse Velocity {impulseVelocity} - Peak {apexHeight}");
         otherPlayer.StartMovement(impulseVelocity);
         apexHeight = currHeight;
-        active = false;
     }
 
     public void CheckLeftRight()
     {
         if (seesaw.left <= transform.position.x && transform.position.x <= seesaw.middle && side == Side.LEFT)
         {
-            HitSeesaw();
+            BeginAnimation();
         }
         else if (seesaw.middle <= transform.position.x && transform.position.x <= seesaw.right && side == Side.RIGHT)
         {
-            HitSeesaw();
+            BeginAnimation();
         }
         else
         {

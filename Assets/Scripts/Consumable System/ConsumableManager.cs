@@ -9,6 +9,7 @@ public class ConsumableManager : MonoBehaviour
     private Dictionary<Type, int> counts;
     private GameController gc;
     private AudioSource audioSource;
+    public AudioClip onPickup;
 
     void Start()
     {
@@ -44,6 +45,10 @@ public class ConsumableManager : MonoBehaviour
 
     public void AddConsumable(ConsumableData consumable)
     {
+        if (consumable.audioClip != null)
+        {
+            audioSource.PlayOneShot(onPickup);
+        }
         counts[consumable.GetType()]++;
     }
 

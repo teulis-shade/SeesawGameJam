@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 01416ac321a5b204c897b0b5d79f19e4, type: 3}
   m_Name: Boost Consumable
-  m_EditorClassIdentifier: Assembly-CSharp::BoostConsumable
+  m_EditorClassIdentifier: 
   activationKey: 32
   audioClip: {fileID: 8300000, guid: 00230554bc797f44a8c7c059c6eb3368, type: 3}
   boostVelocity: 50

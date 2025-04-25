@@ -6,7 +6,7 @@ using System;
 public class ConsumableManager : MonoBehaviour
 {
     public List<ConsumableData> consumables;
-    private Dictionary<ConsumableData, int> counts = new();
+    private Dictionary<Type, int> counts = new();
     private GameController gc;
     private AudioSource audioSource;
 
@@ -18,7 +18,7 @@ public class ConsumableManager : MonoBehaviour
         // Set all consumable counts to zero
         foreach (var c in consumables)
         {
-            counts[c] = 0;
+            counts[c.GetType()] = 0;
         }
         // Subscribe to consumable collected event
         gc.OnConsumableCollected += AddConsumable;
@@ -43,14 +43,14 @@ public class ConsumableManager : MonoBehaviour
 
     public void AddConsumable(ConsumableData consumable)
     {
-        counts[consumable]++;
+        counts[consumable.GetType()]++;
     }
 
     public bool UseConsumable(ConsumableData consumable)
     {
-        if (counts[consumable] > 0)
+        if (counts[consumable.GetType()] > 0)
         {
-            counts[consumable]--;
+            counts[consumable.GetType()]--;
             if (consumable.audioClip != null)
             {
                 audioSource.PlayOneShot(consumable.audioClip);
@@ -63,6 +63,6 @@ public class ConsumableManager : MonoBehaviour
 
     public int GetConsumableCount(ConsumableData consumable)
     {
-        return counts[consumable];
+        return counts[consumable.GetType()];
     }
 }

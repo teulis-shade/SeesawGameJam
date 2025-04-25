@@ -231,6 +231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 102688944159630378, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1375005453303796010, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
       propertyPath: m_Name
       value: MainUI
@@ -1422,6 +1426,7 @@ MonoBehaviour:
   - {fileID: 1879925235}
   - {fileID: 745760845}
   playerStartingImpulse: 45
+  gameStarted: 0
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}
 --- !u!1 &619394800

@@ -208,6 +208,10 @@ public class PlayerScript : MonoBehaviour
         // impulseVelocity += math.pow(math.abs(massDifference), 1d / 3d) * massSign;
         //double impulseVelocity = math.abs(velocity) * mass / otherPlayer.mass;
         // double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
+        if (otherPlayer.mass > mass)
+        {
+            gc.GameOver();
+        }
         double energyLost = mass * gravity * apexHeight;
         double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.3));
         impulseVelocity += minimumImpulse; // Seesaw minimum impulse velocity

@@ -48,10 +48,15 @@ public class GameController : MonoBehaviour
         InitializeObjects();
     }
 
-    public void GameOver()
+    public void GameOver(string causeOfDeath, float height, float mass)
     {
-        DisplayEndScreen();
+        DisplayEndScreen(causeOfDeath, height, mass);
     }
+
+    public void WinGame(PlayerScript.Character ch, float mass)
+    {
+        winScreen.SetActive(true);
+    } 
 
     public List<FlyingObject> GetFlyingObjects() {
         return flyingObjects;
@@ -64,7 +69,7 @@ public class GameController : MonoBehaviour
         activePlayer.transform.position = new Vector3(Mathf.Clamp(activePlayer.transform.position.x, -25f, 25f), activePlayer.transform.position.y);
     }
 
-    private void DisplayEndScreen()
+    private void DisplayEndScreen(string causeOfDeath, float height, float mass)
     {
         loseScreen.SetActive(true);
         FindObjectOfType<MusicController>().transform.parent.gameObject.SetActive(false);

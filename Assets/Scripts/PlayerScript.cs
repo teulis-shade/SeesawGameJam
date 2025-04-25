@@ -133,6 +133,10 @@ public class PlayerScript : MonoBehaviour
         {
             CheckLeftRight();
         }
+        else if (currHeight > 3000f)
+        {
+            gc.WinGame(character, (float)mass);
+        }
         else
         {
             FlyingObject[] hitObjects;
@@ -187,10 +191,6 @@ public class PlayerScript : MonoBehaviour
     {
         gc.UpdateCharacter(character);
         UpdateBagMass();
-        if (startVelocity < 0)
-        {
-            gc.GameOver();
-        }
         active = true;
         currHeight = 1f + groundLevel;
         gc.activePlayer = this;
@@ -207,7 +207,7 @@ public class PlayerScript : MonoBehaviour
         // double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
         if (otherPlayer.mass > mass)
         {
-            gc.GameOver();
+            gc.GameOver("You weren't heavy enough to move your partner", (float)apexHeight, (float)otherPlayer.mass);
         }
         double energyLost = mass * gravity * apexHeight;
         double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.3));
@@ -230,7 +230,7 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-            gc.GameOver();
+            gc.GameOver("You missed the seesaw", (float)apexHeight, (float)(otherPlayer.mass > mass ? otherPlayer.mass : mass));
         }
     }
 

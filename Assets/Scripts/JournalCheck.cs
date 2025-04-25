@@ -24,12 +24,14 @@ public class JournalCheck : MonoBehaviour
     public List<JournalEntry> CheckEntries()
     {
         List<JournalEntry> collectedEntries = new List<JournalEntry>();
+        List<string> collectedNames = new List<string>();
         foreach (var entry in journalEntries)
         {
             string key = entry.name + "Gotten";
-            if (PlayerPrefs.HasKey(key) && PlayerPrefs.GetInt(key) == 1)
+            if (PlayerPrefs.HasKey(key) && PlayerPrefs.GetInt(key) == 1 && !collectedNames.Contains(key))
             {
                 collectedEntries.Add(entry);
+                collectedNames.Add(key);
             }
         }
         return collectedEntries;

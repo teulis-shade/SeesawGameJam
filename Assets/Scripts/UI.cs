@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -28,5 +29,10 @@ public class UI : MonoBehaviour
         SetMassDisplay(gc.activePlayer, true);
         SetMassDisplay(gc.activePlayer.otherPlayer, false);
         velocityText?.SetPlayerVelocity(gc.activePlayer.velocity);
+    }
+
+    public void LoadStart()
+    {
+        SceneManager.LoadScene(0);
     }
 }

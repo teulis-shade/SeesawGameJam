@@ -67,6 +67,8 @@ public class GameController : MonoBehaviour
     private void DisplayEndScreen()
     {
         loseScreen.SetActive(true);
+        FindObjectOfType<MusicController>().transform.parent.gameObject.SetActive(false);
+        gameStarted = false;
         //Display Max Height
         //Display End Mass
         //Display Cause of Death

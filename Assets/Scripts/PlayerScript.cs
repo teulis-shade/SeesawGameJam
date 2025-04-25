@@ -199,7 +199,7 @@ public class PlayerScript : MonoBehaviour
 
     public void BeginAnimation()
     {
-        transform.position = new Vector3(7.5f * (side == Side.LEFT ? -1 : 1), 3.5f);
+        transform.position = new Vector3(10f * (side == Side.LEFT ? -1 : 1), 3.5f);
         seesaw.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = side == Side.RIGHT;
         animator.SetTrigger("HitSeesaw");
         otherPlayer.animator.SetTrigger("Jump");

@@ -1122,7 +1122,7 @@ Transform:
   m_GameObject: {fileID: 503899000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 4.5, z: 0}
+  m_LocalPosition: {x: 10, y: 3.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1699,6 +1699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoostConsumablePickup (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2844982920161657731, guid: bc64a762ff83d854b937d1772eeebcbe, type: 3}
+      propertyPath: consumableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2097,6 +2101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoostConsumablePickup
       objectReference: {fileID: 0}
+    - target: {fileID: 2844982920161657731, guid: bc64a762ff83d854b937d1772eeebcbe, type: 3}
+      propertyPath: consumableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2696,6 +2704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoostConsumablePickup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2844982920161657731, guid: bc64a762ff83d854b937d1772eeebcbe, type: 3}
+      propertyPath: consumableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2853,6 +2865,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoostConsumablePickup (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2844982920161657731, guid: bc64a762ff83d854b937d1772eeebcbe, type: 3}
+      propertyPath: consumableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3026,6 +3042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoostConsumablePickup (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2844982920161657731, guid: bc64a762ff83d854b937d1772eeebcbe, type: 3}
+      propertyPath: consumableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

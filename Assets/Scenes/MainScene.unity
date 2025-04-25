@@ -1325,9 +1325,9 @@ MonoBehaviour:
     amount: 8
   - obj: {fileID: 8051862338358336381, guid: 825150242e2592c4e8384d41cfe1a320, type: 3}
     heightRange:
-      minimum: 10
+      minimum: 45
       maximum: 100
-    amount: 12
+    amount: 8
   - obj: {fileID: 1240150422307126208, guid: ae7bb4629fa701249bc5943989d23108, type: 3}
     heightRange:
       minimum: 200
@@ -1335,9 +1335,9 @@ MonoBehaviour:
     amount: 20
   - obj: {fileID: 1240150422307126208, guid: 9b0ceba06c344824e908a0f3a80a746a, type: 3}
     heightRange:
-      minimum: 10
+      minimum: 50
       maximum: 70
-    amount: 8
+    amount: 4
   - obj: {fileID: 8051862338358336381, guid: e59f892d573853b40af7acf50090d21c, type: 3}
     heightRange:
       minimum: 700
@@ -1433,6 +1433,16 @@ MonoBehaviour:
       minimum: 2800
       maximum: 2900
     amount: 1
+  - obj: {fileID: 8051862338358336381, guid: 825150242e2592c4e8384d41cfe1a320, type: 3}
+    heightRange:
+      minimum: 5
+      maximum: 40
+    amount: 8
+  - obj: {fileID: 1240150422307126208, guid: 9b0ceba06c344824e908a0f3a80a746a, type: 3}
+    heightRange:
+      minimum: 5
+      maximum: 45
+    amount: 8
   startingConsumables:
   - {fileID: 1881045928}
   - {fileID: 1759728795}

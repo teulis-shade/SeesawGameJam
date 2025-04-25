@@ -85,18 +85,15 @@ public class PlayerScript : MonoBehaviour
         if (side == Side.RIGHT)
         {
             GetComponent<SpriteRenderer>().flipX = true;
-            SetCharacter(Character.VACUUM);
         }
         else
         {
             GetComponent<SpriteRenderer>().flipX = false;
-            SetCharacter(Character.HANDBAG);
         }
         if (active)
         {
             gc.activePlayer = this;
             gc.InitializeGame();
-            gc.StartGame();
         }
     }
 
@@ -108,7 +105,7 @@ public class PlayerScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!active)
+        if (!gc.gameStarted || !active)
         {
             return;
         }
@@ -236,6 +233,7 @@ public class PlayerScript : MonoBehaviour
     public void SetCharacter(Character name)
     {
         gc = FindObjectOfType<GameController>();
+        Debug.Log("What's going on here");
         foreach (CharacterStats ch in characterStatStorage)
         {
             if (name == ch.character)

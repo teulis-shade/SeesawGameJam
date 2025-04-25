@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 100
   left: -5
   right: 5
+  objectName: Hangglider
+  description: There are an abnormal amount of these in the skies above Escape Velocity.
+    Insurance scammers, most likely.
   minSpeed: 0.2
   maxSpeed: 1.4
   minAmplitude: 4

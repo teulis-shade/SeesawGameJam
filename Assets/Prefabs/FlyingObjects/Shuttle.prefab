@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 6000
   left: -5
   right: 5
+  objectName: Shuttle
+  description: Shoot for the moon, even if you miss, you'll end up in some weirdo's
+    bag on their way to the moon.
   minModulatorFreq: 1.2
   maxModulatorFreq: 1.8
   shakeAmount: 10

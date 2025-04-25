@@ -102,6 +102,8 @@ MonoBehaviour:
   mass: 18
   left: -2
   right: 2
+  objectName: The Sun
+  description: Hey, what are you doing down here?
   minModulatorFreq: 1.2
   maxModulatorFreq: 1.8
   shakeAmount: 17

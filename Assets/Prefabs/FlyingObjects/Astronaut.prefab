@@ -104,7 +104,7 @@ MonoBehaviour:
   left: -1.5
   right: 1.5
   objectName: Astronaut
-  description: Just a lonely astronaut flying in space.
+  description: 
   minSpeed: 0.05
   maxSpeed: 0.3
   minAmplitude: 8

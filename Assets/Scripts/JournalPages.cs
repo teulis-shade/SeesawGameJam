@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class JournalPages : MonoBehaviour
 {
-    List<JournalCheck.JournalEntry> journalEntries;
+    public List<JournalCheck.JournalEntry> journalEntries;
 
     private int index;
 

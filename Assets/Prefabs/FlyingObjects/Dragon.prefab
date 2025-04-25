@@ -103,6 +103,8 @@ MonoBehaviour:
   mass: 1000
   left: -5.5
   right: 5.5
+  objectName: Dragon
+  description: 
   minSpeed: 0.5
   maxSpeed: 1.6
   minAmplitude: 12

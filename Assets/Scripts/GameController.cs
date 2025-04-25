@@ -14,6 +14,9 @@ public class GameController : MonoBehaviour
     [Range(0f, 150f)]
     public double playerStartingImpulse = 0f;
 
+    [HideInInspector]
+    public bool gameStarted = false;
+
     public GameObject winScreen;
     public GameObject loseScreen;
 
@@ -37,6 +40,7 @@ public class GameController : MonoBehaviour
     public void StartGame()
     {
         activePlayer.StartMovement(playerStartingImpulse);
+        gameStarted = true;
     }
 
     public void InitializeGame()

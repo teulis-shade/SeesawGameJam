@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 600
   left: -6
   right: 6
+  objectName: Helicopter
+  description: '"Breaking news, there is a small dot flying right at... OH GOD THAT''S
+    A PERSON"'
   minSpeed: 0.2
   maxSpeed: 1.3
   minAmplitude: 9

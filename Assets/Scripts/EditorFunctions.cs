@@ -10,9 +10,11 @@ public class EditorFunctions
     {
         GameController gc = GameObject.FindObjectOfType<GameController>();
         JournalCheck journal = GameObject.FindObjectOfType<JournalCheck>();
+        journal.journalEntries.Clear();
         foreach (GameController.FlyingObjectContainer obj in gc.flyingObjectInit)
         {
             journal.journalEntries.Add(new JournalCheck.JournalEntry(obj.obj.GetComponent<FlyingObject>().objectName, obj.obj.GetComponent<FlyingObject>().description, obj.obj.GetComponent<SpriteRenderer>().sprite));
+            EditorUtility.SetDirty(journal);
         }
     }
 
@@ -20,5 +22,11 @@ public class EditorFunctions
     public static void ClearJournal()
     {
         GameObject.FindObjectOfType<JournalCheck>().ClearEntries();
+    }
+
+    [MenuItem("EditorFunctions/Collect all Journal Entries")]
+    public static void JournalOverride()
+    {
+        GameObject.FindObjectOfType<JournalCheck>().CollectAllObjects();
     }
 }

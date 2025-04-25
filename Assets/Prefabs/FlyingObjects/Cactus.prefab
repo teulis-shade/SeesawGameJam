@@ -103,8 +103,8 @@ MonoBehaviour:
   mass: 10000
   left: -1
   right: 1
-  objectName: 
-  description: 
+  objectName: Cactus
+  description: what...
   minSpeed: 0.1
   maxSpeed: 0.3
   minAmplitude: 13

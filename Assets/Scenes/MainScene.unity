@@ -328,6 +328,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+--- !u!1 &137777638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7207887851983329586, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+  m_PrefabInstance: {fileID: 137777637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &137777639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2101649271197531271, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
+  m_PrefabInstance: {fileID: 137777637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &231633422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,8 +1441,8 @@ MonoBehaviour:
   - {fileID: 745760845}
   playerStartingImpulse: 45
   gameStarted: 0
-  winScreen: {fileID: 0}
-  loseScreen: {fileID: 0}
+  winScreen: {fileID: 137777638}
+  loseScreen: {fileID: 137777639}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

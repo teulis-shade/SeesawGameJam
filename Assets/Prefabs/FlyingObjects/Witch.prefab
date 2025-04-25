@@ -102,6 +102,8 @@ MonoBehaviour:
   mass: 800
   left: -2
   right: 2
+  objectName: Witch
+  description: On her way to her first day of school.
   minSpeed: 0.3
   maxSpeed: 0.9
   minAmplitude: 4

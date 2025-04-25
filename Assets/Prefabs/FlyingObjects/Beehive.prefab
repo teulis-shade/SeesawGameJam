@@ -102,6 +102,8 @@ MonoBehaviour:
   mass: 30
   left: -1
   right: 1
+  objectName: Beehive
+  description: 
   minModulatorFreq: 1.2
   maxModulatorFreq: 1.8
   shakeAmount: 17

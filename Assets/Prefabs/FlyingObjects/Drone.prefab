@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 50
   left: -6
   right: 6
+  objectName: Drone
+  description: This drone was on the way to deliver somebody their food. Someone
+    is starving because of you.
   minSpeed: 0.1
   maxSpeed: 1.3
   minAmplitude: 11

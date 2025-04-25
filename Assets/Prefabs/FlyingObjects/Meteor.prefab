@@ -102,6 +102,8 @@ MonoBehaviour:
   mass: 5000
   left: -4
   right: 4
+  objectName: Meteor
+  description: You have saved trillions by doing whatever it is you do to this meteor.
   minModulatorFreq: 1.2
   maxModulatorFreq: 1.8
   shakeAmount: 10

@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 800
   left: -1.5
   right: 1.5
+  objectName: Propellor Boy
+  description: Jimmy never fit in. That's why he attempted to fly away to find a
+    friend.
   minSpeed: 0.1
   maxSpeed: 0.8
   minAmplitude: 2

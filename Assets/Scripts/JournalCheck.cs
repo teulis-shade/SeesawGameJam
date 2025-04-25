@@ -54,4 +54,16 @@ public class JournalCheck : MonoBehaviour
             }
         }
     }
+
+    public void CollectAllObjects()
+    {
+        foreach (var entry in journalEntries)
+        {
+            string key = entry.name + "Gotten";
+            if (!PlayerPrefs.HasKey(key) || PlayerPrefs.GetInt(key) == 0)
+            {
+                PlayerPrefs.SetInt(key, 1);
+            }
+        }
+    }
 }

@@ -101,6 +101,8 @@ MonoBehaviour:
   mass: 3000
   left: -0.5
   right: 0.5
+  objectName: Yet another birb
+  description: Legally distinct from birb
   minSpeed: 1
   maxSpeed: 1.7
   minAmplitude: 15

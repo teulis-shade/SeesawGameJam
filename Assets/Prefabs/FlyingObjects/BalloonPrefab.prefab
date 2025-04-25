@@ -103,8 +103,7 @@ MonoBehaviour:
   left: -3
   right: 3
   objectName: Hot Air Balloon
-  description: A couple thought it would be a good idea to get a scenic view of the
-    mountains.
+  description: 
   minSpeed: 0.1
   maxSpeed: 0.8
   minAmplitude: 1

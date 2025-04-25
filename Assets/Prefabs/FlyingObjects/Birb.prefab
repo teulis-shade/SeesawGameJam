@@ -103,6 +103,8 @@ MonoBehaviour:
   mass: 20
   left: -0.5
   right: 0.5
+  objectName: Birb
+  description: Completely different from a bird.
   minSpeed: 0.3
   maxSpeed: 0.8
   minAmplitude: 6

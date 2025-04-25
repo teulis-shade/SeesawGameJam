@@ -103,6 +103,9 @@ MonoBehaviour:
   mass: 800
   left: -5
   right: 5
+  objectName: Pterodactyl
+  description: Escapee from a wonderful amusement park. One of the few animals to
+    go extinct twice.
   minSpeed: 0.7
   maxSpeed: 1.6
   minAmplitude: 12

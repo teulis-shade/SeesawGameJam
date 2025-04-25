@@ -103,6 +103,8 @@ MonoBehaviour:
   mass: 50
   left: -1
   right: 1
+  objectName: Bird
+  description: Specifically, a pelican. Not to be confused with a birb.
   minSpeed: 0.2
   maxSpeed: 0.6
   minAmplitude: 8

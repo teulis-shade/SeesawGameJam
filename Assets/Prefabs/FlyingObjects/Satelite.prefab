@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 7000
   left: -4.5
   right: 4.5
+  objectName: Satellite
+  description: Container of a deadly space lazer. Or just an imaging machine. One
+    of those.
   minSpeed: 0.1
   maxSpeed: 0.3
   minAmplitude: 13

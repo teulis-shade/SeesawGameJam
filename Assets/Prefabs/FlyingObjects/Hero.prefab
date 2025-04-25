@@ -102,6 +102,9 @@ MonoBehaviour:
   mass: 1500
   left: -2.5
   right: 2.5
+  objectName: Superhero
+  description: The Doctor is pleased by your contribution to the Anti Hero League.
+    Call him for your reward.
   minSpeed: 3.4
   maxSpeed: 1.4
   minAmplitude: 8

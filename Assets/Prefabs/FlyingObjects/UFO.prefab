@@ -103,6 +103,8 @@ MonoBehaviour:
   mass: 3000
   left: -3
   right: 3
+  objectName: UFO
+  description: Alien included free of charge.
   minSpeed: 0.5
   maxSpeed: 1.3
   minAmplitude: 13

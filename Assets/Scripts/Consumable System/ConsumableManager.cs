@@ -6,13 +6,14 @@ using System;
 public class ConsumableManager : MonoBehaviour
 {
     public List<ConsumableData> consumables;
-    private Dictionary<Type, int> counts = new();
+    private Dictionary<Type, int> counts;
     private GameController gc;
     private AudioSource audioSource;
 
     void Start()
     {
         // Get GameController instance
+        counts = new Dictionary<Type, int>();
         gc = FindObjectOfType<GameController>();
         audioSource = GetComponent<AudioSource>();
         // Set all consumable counts to zero

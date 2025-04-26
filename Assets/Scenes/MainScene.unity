@@ -1907,13 +1907,29 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6927770964308227427, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
+      propertyPath: musicStorage.Array.data[0].music
+      value: 
+      objectReference: {fileID: 8300000, guid: dc0cdfd3de2a5db4e8f8c01e48ab183f, type: 3}
+    - target: {fileID: 6927770964308227427, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
+      propertyPath: musicStorage.Array.data[1].music
+      value: 
+      objectReference: {fileID: 8300000, guid: 2007f81395196424196051384cd751f5, type: 3}
+    - target: {fileID: 6927770964308227427, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
+      propertyPath: musicStorage.Array.data[2].music
+      value: 
+      objectReference: {fileID: 8300000, guid: eed9b609ec828164c9a9f61f6273e795, type: 3}
+    - target: {fileID: 6927770964308227427, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
       propertyPath: musicStorage.Array.data[3].music
       value: 
-      objectReference: {fileID: 8300000, guid: e079270e27a143f43927629c2caa467b, type: 3}
+      objectReference: {fileID: 8300000, guid: ee141dcaad6bfe74cb498b195f145720, type: 3}
     - target: {fileID: 6927770964308227427, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
       propertyPath: musicStorage.Array.data[3].character
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8612696283822555970, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e0415e51d3785114e81f3ac64fa6d94a, type: 3}
     - target: {fileID: 8612696283822555970, guid: 0e565e0208dd7f049950909dfd37a113, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1

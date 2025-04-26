@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
-using UnityEditor.Animations;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -73,7 +72,7 @@ public class PlayerScript : MonoBehaviour
     {
         public Character character;
         public string Name;
-        public AnimatorController controller;
+        public RuntimeAnimatorController controller;
     }
 
     public Character character;

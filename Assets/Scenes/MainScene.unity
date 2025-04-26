@@ -237,14 +237,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainUI
       objectReference: {fileID: 0}
-    - target: {fileID: 1375005453303796010, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2023121109201633774, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2565653833533791529, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -323,10 +315,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2565653833533791529, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207887851983329586, guid: 0aa76a10b66b1e14daf509574e1ae22d, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2142,6 +2130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consumables:
   - {fileID: 11400000, guid: 38705fa9ced3e0c438ba93eb9b84befd, type: 2}
+  onPickup: {fileID: 8300000, guid: c18a12ea51d0f3f4182e0442953b57da, type: 3}
 --- !u!4 &1140707876
 Transform:
   m_ObjectHideFlags: 0
@@ -2172,7 +2161,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7822168993654855918, guid: fa4b379d9eaedff45bf0819911ac70f2, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c18a12ea51d0f3f4182e0442953b57da, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

@@ -131,7 +131,7 @@ public class PlayerScript : MonoBehaviour
         {
             CheckLeftRight();
         }
-        else if (currHeight > 3000f)
+        else if (currHeight > 2900f)
         {
             gc.WinGame(character, (float)mass);
         }

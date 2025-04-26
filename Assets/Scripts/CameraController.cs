@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,7 +35,7 @@ public class CameraController : MonoBehaviour
     public void UpdateCamera(double height)
     {
         this.height = height;
-        Vector3 calcTransform = new Vector3(Mathf.Clamp(gc.activePlayer.transform.position.x, -10f, 10f), gc.activePlayer.transform.position.y, -10f);
+        Vector3 calcTransform = new Vector3(Mathf.Clamp(gc.activePlayer.transform.position.x, -10f, 10f), math.clamp(gc.activePlayer.transform.position.y, 0f, 2800f), -10f);
         float targetX = calcTransform.x;
         float targetSize = defaultSize;
         if (height < zoomStartHeight)

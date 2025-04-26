@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
-using UnityEditor.Animations;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -44,7 +43,6 @@ public class PlayerScript : MonoBehaviour
     public PlayerScript otherPlayer;
     public Seesaw seesaw;
     private GameController gc;
-    public GameObject backpack;
     public List<CharacterStats> characterStatStorage;
 
     [Header("Other Config")]
@@ -73,7 +71,7 @@ public class PlayerScript : MonoBehaviour
     {
         public Character character;
         public string Name;
-        public AnimatorController controller;
+        public RuntimeAnimatorController controller;
     }
 
     public Character character;
@@ -184,7 +182,7 @@ public class PlayerScript : MonoBehaviour
 
     public void UpdateBagMass()
     {
-        backpack.transform.localScale = new Vector3((float)math.sqrt(mass) / 10f, (float)math.sqrt(mass) / 10f);
+        //backpack.transform.localScale = new Vector3((float)math.sqrt(mass) / 10f, (float)math.sqrt(mass) / 10f);
     }
 
     public void StartMovement(double startVelocity)

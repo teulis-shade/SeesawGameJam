@@ -67,7 +67,7 @@ public class NearestArrow : MonoBehaviour
             //SCALE ARROW
             float scaleComponent = (foVector - playerVector).magnitude;
             // CAN CHANGE THIS EQUATION
-            scaleComponent = 150f-scaleComponent/4;
+            scaleComponent = 150f-scaleComponent/3;
 
             rt.sizeDelta = new Vector2(scaleComponent, scaleComponent);
 

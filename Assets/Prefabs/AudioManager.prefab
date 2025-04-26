@@ -594,11 +594,11 @@ MonoBehaviour:
   source: {fileID: 8612696283822555970}
   musicStorage:
   - character: 0
-    music: {fileID: 8300000, guid: ae88fddb63236d649ae2acee857a2caf, type: 3}
+    music: {fileID: 8300000, guid: dc0cdfd3de2a5db4e8f8c01e48ab183f, type: 3}
   - character: 2
-    music: {fileID: 8300000, guid: d56fbbcfd9b21964dab822b68ce3d811, type: 3}
+    music: {fileID: 8300000, guid: 2007f81395196424196051384cd751f5, type: 3}
   - character: 1
-    music: {fileID: 8300000, guid: 1aac92d6f0e61054fa1f850ee3a9f58d, type: 3}
+    music: {fileID: 8300000, guid: eed9b609ec828164c9a9f61f6273e795, type: 3}
 --- !u!82 &8612696283822555970
 AudioSource:
   m_ObjectHideFlags: 0

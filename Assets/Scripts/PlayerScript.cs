@@ -43,7 +43,6 @@ public class PlayerScript : MonoBehaviour
     public PlayerScript otherPlayer;
     public Seesaw seesaw;
     private GameController gc;
-    public GameObject backpack;
     public List<CharacterStats> characterStatStorage;
 
     [Header("Other Config")]
@@ -183,7 +182,7 @@ public class PlayerScript : MonoBehaviour
 
     public void UpdateBagMass()
     {
-        backpack.transform.localScale = new Vector3((float)math.sqrt(mass) / 10f, (float)math.sqrt(mass) / 10f);
+        //backpack.transform.localScale = new Vector3((float)math.sqrt(mass) / 10f, (float)math.sqrt(mass) / 10f);
     }
 
     public void StartMovement(double startVelocity)

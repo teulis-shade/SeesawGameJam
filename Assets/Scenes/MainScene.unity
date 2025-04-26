@@ -661,16 +661,16 @@ MonoBehaviour:
   characterStatStorage:
   - character: 0
     Name: Bug Catcher
-    controller: {fileID: 9100000, guid: 85258af673e32c24a94a5575b26fb857, type: 2}
+    controller: {fileID: 9100000, guid: 92c76193b5d2e3e4fb81291f46b1a308, type: 2}
   - character: 1
     Name: Vacuum Man
     controller: {fileID: 9100000, guid: 9b1a19e723dcc474c906763a45599e78, type: 2}
   - character: 2
     Name: Handbag Woman
-    controller: {fileID: 9100000, guid: 75e01742513394149b9b233c5ecd99f0, type: 2}
+    controller: {fileID: 9100000, guid: 865b6fc7298685b479c5153b9d5aa9c5, type: 2}
   - character: 3
     Name: Thief
-    controller: {fileID: 9100000, guid: 2ce4c2721a4dd4349a6377de8aa76758, type: 2}
+    controller: {fileID: 9100000, guid: 6742fd51e3488264aaebe84349e3be7d, type: 2}
   side: 0
   leftBoundary: -3
   rightBoundary: 3
@@ -1098,16 +1098,16 @@ MonoBehaviour:
   characterStatStorage:
   - character: 0
     Name: Bug Catcher
-    controller: {fileID: 9100000, guid: 85258af673e32c24a94a5575b26fb857, type: 2}
+    controller: {fileID: 9100000, guid: 92c76193b5d2e3e4fb81291f46b1a308, type: 2}
   - character: 1
     Name: Vacuum Man
     controller: {fileID: 9100000, guid: 9b1a19e723dcc474c906763a45599e78, type: 2}
   - character: 2
     Name: Handbag Woman
-    controller: {fileID: 9100000, guid: 75e01742513394149b9b233c5ecd99f0, type: 2}
+    controller: {fileID: 9100000, guid: 865b6fc7298685b479c5153b9d5aa9c5, type: 2}
   - character: 3
     Name: Thief
-    controller: {fileID: 9100000, guid: 2ce4c2721a4dd4349a6377de8aa76758, type: 2}
+    controller: {fileID: 9100000, guid: 6742fd51e3488264aaebe84349e3be7d, type: 2}
   side: 1
   leftBoundary: -3
   rightBoundary: 3

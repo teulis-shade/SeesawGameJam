@@ -8,6 +8,8 @@ public class Seesaw : MonoBehaviour
     public float middle;
     public float right;
 
+    public Animator animator;
+
     private void Start()
     {
 

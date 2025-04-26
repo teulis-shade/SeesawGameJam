@@ -133,6 +133,10 @@ public class PlayerScript : MonoBehaviour
         {
             CheckLeftRight();
         }
+        else if (currHeight > 3000f)
+        {
+            gc.WinGame(character, (float)mass);
+        }
         else
         {
             FlyingObject[] hitObjects;
@@ -187,14 +191,20 @@ public class PlayerScript : MonoBehaviour
     {
         gc.UpdateCharacter(character);
         UpdateBagMass();
-        if (startVelocity < 0)
-        {
-            gc.GameOver();
-        }
         active = true;
         currHeight = 1f + groundLevel;
         gc.activePlayer = this;
         velocity = startVelocity;
+    }
+
+    public void BeginAnimation()
+    {
+        transform.position = new Vector3(10f * (side == Side.LEFT ? -1 : 1), 3.5f);
+        seesaw.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = side == Side.RIGHT;
+        animator.SetTrigger("HitSeesaw");
+        otherPlayer.animator.SetTrigger("Jump");
+        seesaw.animator.SetTrigger("HitSeesaw");
+        active = false;
     }
 
     public void HitSeesaw()
@@ -207,7 +217,7 @@ public class PlayerScript : MonoBehaviour
         // double impulseVelocity = math.abs(velocity) * math.pow(mass / otherPlayer.mass, 0.5);
         if (otherPlayer.mass > mass)
         {
-            gc.GameOver();
+            gc.GameOver("You weren't heavy enough to move your partner", (float)apexHeight, (float)otherPlayer.mass);
         }
         double energyLost = mass * gravity * apexHeight;
         double impulseVelocity = math.sqrt((2 * energyLost) / (otherPlayer.mass * 0.3));
@@ -215,22 +225,21 @@ public class PlayerScript : MonoBehaviour
         //Debug.Log($"@@@@@ Impulse Velocity {impulseVelocity} - Peak {apexHeight}");
         otherPlayer.StartMovement(impulseVelocity);
         apexHeight = currHeight;
-        active = false;
     }
 
     public void CheckLeftRight()
     {
         if (seesaw.left <= transform.position.x && transform.position.x <= seesaw.middle && side == Side.LEFT)
         {
-            HitSeesaw();
+            BeginAnimation();
         }
         else if (seesaw.middle <= transform.position.x && transform.position.x <= seesaw.right && side == Side.RIGHT)
         {
-            HitSeesaw();
+            BeginAnimation();
         }
         else
         {
-            gc.GameOver();
+            gc.GameOver("You missed the seesaw", (float)apexHeight, (float)(otherPlayer.mass > mass ? otherPlayer.mass : mass));
         }
     }
 

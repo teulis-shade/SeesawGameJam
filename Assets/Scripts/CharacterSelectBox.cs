@@ -15,6 +15,6 @@ public class CharacterSelectBox : MonoBehaviour, IPointerClickHandler, IPointerE
     public void OnPointerClick(PointerEventData data)
     {
         selection.SelectCharacter(((RectTransform)transform).anchorMin.x, ((RectTransform)transform).anchorMax.x, character);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }

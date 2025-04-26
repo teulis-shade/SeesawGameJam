@@ -99,11 +99,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0
-  mass: 18
   left: -2
   right: 2
   objectName: The Sun
   description: Hey, what are you doing down here?
+  mass: 800
   minModulatorFreq: 1.2
   maxModulatorFreq: 1.8
   shakeAmount: 17
